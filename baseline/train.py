@@ -76,7 +76,7 @@ if __name__ == "__main__":
 
     for i in range(1, params.num_folds+1):
         #made edits to the next 5 lines
-        f = open("drive/MyDrive/cs224s/CS224S_N_final_project/preprocessed_data_split_nona_02_28.pkl", "rb")
+        f = open("{}".format(params.data, "rb")
         train, test = pickle.load(f)
         f.close()
 

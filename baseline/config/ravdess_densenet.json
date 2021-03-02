@@ -1,6 +1,6 @@
 {
 	"dataset_name": "RAVDESS",
-	"data_dir": "/path/to/data_directory/",
+	"data": "drive/MyDrive/cs224s/CS224S_N_final_project/preprocessed_data_split_nona_02_28.pkl",
 	"dataaug": false,
 	"pretrained": true,
 	"scheduler": true,
