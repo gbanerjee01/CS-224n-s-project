@@ -4,7 +4,7 @@ import torch.nn as nn
 class LinearFeedForward(nn.Module):
 	def __init__(self, dataset, input_size):
 		super().__init__()
-		num_classes = 7 if dataset=="emotion" else 2
+		num_classes = 8 if dataset=="emotion" else 2
 		linear_layer_size = 2048
 		model = nn.Sequential(
 			nn.Linear(input_size, linear_layer_size),
