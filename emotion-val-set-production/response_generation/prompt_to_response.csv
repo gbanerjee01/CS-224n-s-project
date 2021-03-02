@@ -117,6 +117,9 @@ prompts/grocery.png,"Okay, ordering  to your address, is this correct?"
 prompts/grocery.png,"Okay, ordering  to your address, is this correct?"
 prompts/grocery.png,"Okay, ordering  to your address, is this correct?"
 prompts/grocery.png,"Okay, ordering  to your address, is this correct?"
+prompts/grocery.png,"I'm sorry, I cannot do that"
+prompts/grocery.png,"I'm sorry, I don't know how to do that"
+prompts/grocery.png,"I'm sorry, I didn't catch that"
 prompts/calculator.png,"Okay, the answer to your problem 2+5=7 Is this correct?"
 prompts/calculator.png,"Okay, the answer to your problem 3+9=12 Is this correct?"
 prompts/calculator.png,"Okay, the answer to your problem 45+54=99 Is this correct?"
@@ -138,6 +141,9 @@ prompts/calculator.png,"Okay, the answer to your problem 33+44=77 Is this correc
 prompts/calculator.png,"Okay, the answer to your problem 22+11=33 Is this correct?"
 prompts/calculator.png,"Okay, the answer to your problem 10+19=29 Is this correct?"
 prompts/calculator.png,"Okay, the answer to your problem 12+15=27 Is this correct?"
+prompts/calculator.png,"I'm sorry, I cannot do that"
+prompts/calculator.png,"I'm sorry, I don't know how to do that"
+prompts/calculator.png,"I'm sorry, I didn't catch that"
 prompts/news.png,Reading the article from the new york post Is this correct?
 prompts/news.png,Reading the article from mother jones Is this correct?
 prompts/news.png,Reading the article from the new york times Is this correct?
@@ -148,6 +154,9 @@ prompts/news.png,Reading the article from the verge Is this correct?
 prompts/news.png,Reading the article from fox news Is this correct?
 prompts/news.png,Reading the article from cnn Is this correct?
 prompts/news.png,Reading the article from cnbc Is this correct?
+prompts/news.png,"I'm sorry, I cannot do that"
+prompts/news.png,"I'm sorry, I don't know how to do that"
+prompts/news.png,"I'm sorry, I didn't catch that"
 prompts/flight.png,I have booked your plane tickets to los angeles Is this correct?
 prompts/flight.png,I have booked your plane tickets to columbus Is this correct?
 prompts/flight.png,I have booked your plane tickets to chicago Is this correct?
@@ -158,6 +167,9 @@ prompts/flight.png,I have booked your plane tickets to st. louis Is this correct
 prompts/flight.png,I have booked your plane tickets to san jose Is this correct?
 prompts/flight.png,I have booked your plane tickets to san francisco Is this correct?
 prompts/flight.png,I have booked your plane tickets to doylestow Is this correct?
+prompts/flight.png,"I'm sorry, I cannot do that"
+prompts/flight.png,"I'm sorry, I don't know how to do that"
+prompts/flight.png,"I'm sorry, I didn't catch that"
 prompts/calendar.png,"I am adding an event on Jun. 20, 2021 to your calendar. Is this correct?"
 prompts/calendar.png,"I am adding an event on Feb. 4, 2022 to your calendar. Is this correct?"
 prompts/calendar.png,"I am adding an event on Feb. 6, 2022 to your calendar. Is this correct?"
@@ -258,6 +270,9 @@ prompts/calendar.png,"I am adding an event on Oct. 27, 2021 to your calendar. Is
 prompts/calendar.png,"I am adding an event on May 7, 2021 to your calendar. Is this correct?"
 prompts/calendar.png,"I am adding an event on Nov. 7, 2021 to your calendar. Is this correct?"
 prompts/calendar.png,"I am adding an event on Aug. 31, 202 to your calendar. Is this correct?"
+prompts/calendar.png,"I'm sorry, I cannot do that"
+prompts/calendar.png,"I'm sorry, I don't know how to do that"
+prompts/calendar.png,"I'm sorry, I didn't catch that"
 prompts/message.png,"Alright, your message says class is hard todayIs this correct?"
 prompts/message.png,"Alright, your message says life is goodIs this correct?"
 prompts/message.png,"Alright, your message says i am furiousIs this correct?"
@@ -267,6 +282,9 @@ prompts/message.png,"Alright, your message says pennsylvania is the best stateIs
 prompts/message.png,"Alright, your message says i love flamenco dancingIs this correct?"
 prompts/message.png,"Alright, your message says the most frustrating thing is pancakesIs this correct?"
 prompts/message.png,"Alright, your message says i think plato's republic is awesomeIs this correct?"
+prompts/message.png,"I'm sorry, I cannot do that"
+prompts/message.png,"I'm sorry, I don't know how to do that"
+prompts/message.png,"I'm sorry, I didn't catch that"
 prompts/call.png,"Okay, calling donald trump Is this correct?"
 prompts/call.png,"Okay, calling kanye west Is this correct?"
 prompts/call.png,"Okay, calling hilary clinton Is this correct?"
@@ -317,6 +335,9 @@ prompts/call.png,"Okay, calling diana norris Is this correct?"
 prompts/call.png,"Okay, calling linda doyle Is this correct?"
 prompts/call.png,"Okay, calling benjamin wong Is this correct?"
 prompts/call.png,"Okay, calling omar mathis Is this correct?"
+prompts/call.png,"I'm sorry, I cannot do that"
+prompts/call.png,"I'm sorry, I don't know how to do that"
+prompts/call.png,"I'm sorry, I didn't catch that"
 prompts/music.png,"Okay, playing the album to pimp a butterfly by kendrick lamar . Is this correct?"
 prompts/music.png,"Okay, playing the song juicy by The notorious b.i.g . Is this correct?"
 prompts/music.png,"Okay, playing the song hotel california by eagles . Is this correct?"
@@ -327,6 +348,9 @@ prompts/music.png,"Okay, playing the song separate ways by journey . Is this cor
 prompts/music.png,"Okay, playing the song noticed by lil mosey . Is this correct?"
 prompts/music.png,"Okay, playing the song i want to hold your hand by the beatles . Is this correct?"
 prompts/music.png,"Okay, playing the 	 . Is this correct?"
+prompts/music.png,"I'm sorry, I cannot do that"
+prompts/music.png,"I'm sorry, I don't know how to do that"
+prompts/music.png,"I'm sorry, I didn't catch that"
 prompts/timer.png,"Okay, setting a timer for 10 minutes. Is this correct?"
 prompts/timer.png,"Okay, setting a timer for 11 minutes. Is this correct?"
 prompts/timer.png,"Okay, setting a timer for 12 minutes. Is this correct?"
@@ -368,3 +392,6 @@ prompts/timer.png,"Okay, setting a timer for 47 minutes. Is this correct?"
 prompts/timer.png,"Okay, setting a timer for 48 minutes. Is this correct?"
 prompts/timer.png,"Okay, setting a timer for 49 minutes. Is this correct?"
 prompts/timer.png,"Okay, setting a timer for 5 minutes. Is this correct?"
+prompts/timer.png,"I'm sorry, I cannot do that"
+prompts/timer.png,"I'm sorry, I don't know how to do that"
+prompts/timer.png,"I'm sorry, I didn't catch that"
