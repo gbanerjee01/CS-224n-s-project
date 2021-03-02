@@ -78,13 +78,11 @@ if __name__ == "__main__":
     for i in range(1, params.num_folds+1):
         #made edits to the next 5 lines
         with open(params.data, 'rb') as fopen:
-            train, test = pickle.load(fopen, encoding='latin1')
-        #f = open("{}".format(params.data, "rb"))
-        #train, test = pickle.load(f)
-        #f.close()
+            train_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
 
-        train_loader = dataloaders.datasetravdess.fetch_dataloader(train, params.batch_size, params.num_workers)
-        val_loader = dataloaders.datasetravdess.fetch_dataloader(test, params.batch_size, params.num_workers)
+        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_dataset, params.batch_size, params.num_workers)
+        val_loader = dataloaders.datasetravdess.fetch_dataloader(test_dataset, params.batch_size, params.num_workers)
+        
 
         writer = SummaryWriter(comment=params.dataset_name)
         if params.model=="densenet":
@@ -94,7 +92,7 @@ if __name__ == "__main__":
         elif params.model=="inception":
             model = models.inception.Inception(params.dataset_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
-            model = models.linear_feedforward.LinearFeedFoward(params.dataset_name).to(device)
+            model = models.linear_feedforward.LinearFeedForward(params.dataset_name).to(device)
 
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
@@ -105,5 +103,3 @@ if __name__ == "__main__":
             scheduler = None
 
         train_and_evaluate(model, device, train_loader, val_loader, optimizer, loss_fn, writer, params, i, scheduler)
-
-
