@@ -6,7 +6,7 @@
 	"dataset": "emotion",
 	"model": "linear_feedforward",
 	"batch_size": 32,
-	"num_workers": 8,
+	"num_workers": 0,
 	"epochs": 70,
 	"lr": 1e-4,
 	"weight_decay": 1e-3,

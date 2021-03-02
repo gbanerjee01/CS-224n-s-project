@@ -27,6 +27,9 @@ def train(model, device, data_loader, optimizer, loss_fn):
     model.train()
     loss_avg = utils.RunningAverage()
 
+    correct = 0
+    total = 0
+
     with tqdm(total=len(data_loader)) as t:
         for batch_idx, data in enumerate(data_loader):
             inputs = data[0].to(device)
@@ -34,6 +37,10 @@ def train(model, device, data_loader, optimizer, loss_fn):
 
             outputs = model(inputs)
             loss = loss_fn(outputs, target)
+
+            _, predicted = torch.max(outputs.data, 1)
+            total += target.size(0)
+            correct += (predicted == target).sum().item()
 
             optimizer.zero_grad()
             loss.backward()
@@ -43,29 +50,36 @@ def train(model, device, data_loader, optimizer, loss_fn):
 
             t.set_postfix(loss='{:05.3f}'.format(loss_avg()))
             t.update()
-    return loss_avg()
+
+            total += target.size(0)
+            correct += (predicted == target).sum().item()
+
+    return loss_avg(), (100*correct/total)
 
 
 def train_and_evaluate(model, device, train_loader, val_loader, optimizer, loss_fn, writer, params, split, scheduler=None):
     best_acc = 0.0
 
     for epoch in range(params.epochs):
-        avg_loss = train(model, device, train_loader, optimizer, loss_fn)
+        train_loss, train_accuracy = train(model, device, train_loader, optimizer, loss_fn)
 
-        acc = validate.evaluate(model, device, val_loader)
-        print("Epoch {}/{} Loss:{} Valid Acc:{}".format(epoch, params.epochs, avg_loss, acc))
+        val_loss, val_accuracy = validate.evaluate(model, device, val_loader, loss_fn)
+        print("Epoch {}/{} Training Loss:{}, Training Accuracy: {} Validation Loss: {}, Validation Acc:{}".format(epoch, params.epochs, train_loss, train_accuracy, val_loss, val_accuracy))
 
-        is_best = (acc > best_acc)
+        is_best = (val_accuracy > best_acc)
         if is_best:
-            best_acc = acc
+            best_acc = val_accuracy
         if scheduler:
             scheduler.step()
 
         utils.save_checkpoint({"epoch": epoch + 1,
                                "model": model.state_dict(),
                                "optimizer": optimizer.state_dict()}, is_best, split, "{}".format(params.checkpoint_dir))
-        writer.add_scalar("data{}/trainingLoss{}".format(params.dataset_name, split), avg_loss, epoch)
-        writer.add_scalar("data{}/valLoss{}".format(params.dataset_name, split), acc, epoch)
+
+        writer.add_scalar("data{}/trainingLoss{}".format(params.dataset_name, split), train_loss, epoch)
+        writer.add_scalar("data{}/trainingAccuracy{}".format(params.dataset_name, split), train_accuracy, epoch)
+        writer.add_scalar("data{}/valLoss{}".format(params.dataset_name, split), val_loss, epoch)
+        writer.add_scalar("data{}/valAccuracy{}".format(params.dataset_name, split), val_accuracy, epoch)
     writer.close()
 
 

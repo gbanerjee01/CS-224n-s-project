@@ -1,8 +1,11 @@
 import torch
+import utils
 
-def evaluate(model, device, test_loader):
+def evaluate(model, device, test_loader, loss_fn):
 	correct = 0
 	total = 0
+	loss_avg = utils.RunningAverage()
+
 	model.eval()
 	with torch.no_grad():
 		for batch_idx, data in enumerate(test_loader):
@@ -15,4 +18,7 @@ def evaluate(model, device, test_loader):
 			total += target.size(0)
 			correct += (predicted == target).sum().item()
 
-	return (100*correct/total)
+			loss = loss_fn(outputs, target - 1)
+			loss_avg.update(loss.item())
+
+	return loss_avg(), (100*correct/total)
