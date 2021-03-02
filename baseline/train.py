@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
     for i in range(1, params.num_folds+1):
         #made edits to the next 5 lines
-        f = open("{}".format(params.data, "rb")
+        f = open("{}".format(params.data, "rb"))
         train, test = pickle.load(f)
         f.close()
 

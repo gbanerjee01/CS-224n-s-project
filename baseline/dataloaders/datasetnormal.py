@@ -1,4 +1,4 @@
-from torch.utils.data import *
+from torch.utils.data import BatchSampler, Dataset, DataLoader
 import lmdb
 import torchvision
 import pandas as pd
