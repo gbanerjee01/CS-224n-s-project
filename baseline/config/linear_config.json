@@ -1,0 +1,14 @@
+{
+	"dataset_name": "RAVDESS",
+	"data": "drive/MyDrive/cs224s/CS224S_N_final_project/preprocessed_data_split_nona_02_28.pkl",
+	"dataaug": false,
+	"scheduler": true,
+	"model": "linear_feedforward",
+	"batch_size": 32,
+	"num_workers": 8,
+	"epochs": 70,
+	"lr": 1e-4,
+	"weight_decay": 1e-3,
+	"num_folds":1,
+	"checkpoint_dir": "/checkpoints/linear/"
+}
