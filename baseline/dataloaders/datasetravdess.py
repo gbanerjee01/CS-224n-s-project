@@ -44,6 +44,6 @@ class RavdessDataset(Dataset):
     return (values, target)
 
 def fetch_dataloader(df, batch_size, num_workers):
-    dataset = AudioDataset(df)
+    dataset = RavdessDataset(df)
     dataloader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=num_workers)
     return dataloader
