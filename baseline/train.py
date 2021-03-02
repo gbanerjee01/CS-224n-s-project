@@ -30,10 +30,9 @@ def train(model, device, data_loader, optimizer, loss_fn):
     with tqdm(total=len(data_loader)) as t:
         for batch_idx, data in enumerate(data_loader):
             inputs = data[0].to(device)
-            target = data[1].squeeze(1).to(device)
+            target = data[1].squeeze(1).to(device) - 1
 
             outputs = model(inputs)
-
             loss = loss_fn(outputs, target)
 
             optimizer.zero_grad()

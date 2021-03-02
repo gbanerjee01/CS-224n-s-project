@@ -19,7 +19,7 @@ class AudioDataset(Dataset):
 	def __getitem__(self, idx):
 		entry = self.data[idx]
 		output_data = {}
-		values = entry["values"].reshape(-1, 128, self.length)
+		values = entry["values"].reshape(-1, 256, self.length)
 		values = torch.Tensor(values)
 		if self.transforms:
 			values = self.transforms(values)

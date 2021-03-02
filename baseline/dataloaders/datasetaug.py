@@ -41,9 +41,9 @@ class MelSpectrogram(object):
 			eps = 1e-6
 			spec = spec.numpy()
 			spec = np.log(spec+ eps)
-			spec = np.asarray(torchvision.transforms.Resize((128, self.length))(Image.fromarray(spec)))
+			spec = np.asarray(torchvision.transforms.Resize((256, self.length))(Image.fromarray(spec)))
 			specs.append(spec)
-		specs = np.array(specs).reshape(-1, 128, self.length)
+		specs = np.array(specs).reshape(-1, 256, self.length)
 		specs = torch.Tensor(specs)
 		return specs
 
@@ -67,12 +67,12 @@ class AudioDataset(Dataset):
 				values = self.transforms(entry["audio"])
 		else:
 			entry = self.data[idx]
-			values = torch.Tensor(entry["values"].reshape(-1, 128, self.length))
+			values = torch.Tensor(entry["values"].reshape(-1, 256, self.length))
 		target = torch.LongTensor([entry["target"]])
 		return (values, target)
 
 def fetch_dataloader(pkl_dir, dataset_name, batch_size, num_workers, mode):
-	transforms = MelSpectrogram(128, mode, dataset_name)
+	transforms = MelSpectrogram(256, mode, dataset_name)
 	dataset = AudioDataset(pkl_dir, dataset_name, transforms=transforms)
 	dataloader = DataLoader(dataset,shuffle=True, batch_size=batch_size, num_workers=num_workers)
 	return dataloader

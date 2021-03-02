@@ -12,9 +12,23 @@ from torch.utils.data import Dataset
 #edited this whole file
 
 class RavdessDataset(Dataset):
-  def __init__(self, df):
+  def __init__(self, df, input_len):
     self.df = df.reset_index(drop=True)
-    self.length=250
+    self.length=input_len
+
+    self.max_len = 0
+    padded = []
+    for idx in range(len(self.df)):
+      m = self.df.loc[idx, 'M']
+      self.max_len = max(self.max_len, m.shape[1])
+      if m.shape[1] >= input_len:
+        m = m[:input_len]
+      else:
+        temp = np.zeros((m.shape[0], input_len))
+        temp[:,:m.shape[1]] = m
+        m = temp
+      padded.append(m)
+    self.df['M_pad'] = padded
   
   def __len__(self):
     return len(self.df)
@@ -25,7 +39,7 @@ class RavdessDataset(Dataset):
     
     output_data = {}
     sample = {
-        'M': self.df.loc[idx, 'M'],
+        'M': self.df.loc[idx, 'M_pad'],
         'mfcc': self.df.loc[idx, 'mfcc'],
         'chromagram': self.df.loc[idx, 'chromagram'],
         'emotion': self.df.loc[idx, 'emotion'],
@@ -36,7 +50,7 @@ class RavdessDataset(Dataset):
     }
 
     output_data = {}
-    values = sample["M"].reshape(-1, 128, self.length)
+    values = sample["M"].reshape(-1, 256, self.length)
     values = torch.Tensor(values)
 
     target = torch.LongTensor([sample["emotion"]])
@@ -44,6 +58,6 @@ class RavdessDataset(Dataset):
     return (values, target)
 
 def fetch_dataloader(df, batch_size, num_workers):
-    dataset = RavdessDataset(df)
+    dataset = RavdessDataset(df, 250)
     dataloader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=num_workers)
     return dataloader
