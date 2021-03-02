@@ -9,6 +9,7 @@ import argparse
 import models.densenet
 import models.resnet
 import models.inception
+import models.linear_feedforward
 import time
 import dataloaders.datasetaug
 import dataloaders.datasetnormal
@@ -90,6 +91,8 @@ if __name__ == "__main__":
             model = models.resnet.ResNet(params.dataset_name, params.pretrained).to(device)
         elif params.model=="inception":
             model = models.inception.Inception(params.dataset_name, params.pretrained).to(device) 
+        elif params.model=="linear_feedforward":
+            model = models.linear_feedforward.LinearFeedFoward(params.dataset_name).to(device)
 
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
