@@ -12,4 +12,4 @@ class DenseNet(nn.Module):
     def forward(self, x):
     	squeezed_input = x.squeeze(1).reshape(x.shape[0],-1)
     	output = self.model(squeezed_input)
-        return output
+    	return output
