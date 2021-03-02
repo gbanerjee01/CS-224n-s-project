@@ -77,9 +77,11 @@ if __name__ == "__main__":
 
     for i in range(1, params.num_folds+1):
         #made edits to the next 5 lines
-        f = open("{}".format(params.data, "rb"))
-        train, test = pickle.load(f)
-        f.close()
+        with open(params.data, 'rb') as fopen:
+            train, test = pickle.load(fopen, encoding='latin1')
+        #f = open("{}".format(params.data, "rb"))
+        #train, test = pickle.load(f)
+        #f.close()
 
         train_loader = dataloaders.datasetravdess.fetch_dataloader(train, params.batch_size, params.num_workers)
         val_loader = dataloaders.datasetravdess.fetch_dataloader(test, params.batch_size, params.num_workers)

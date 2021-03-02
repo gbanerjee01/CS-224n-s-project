@@ -1,8 +1,9 @@
 {
 	"dataset_name": "RAVDESS",
-	"data": "drive/MyDrive/cs224s/CS224S_N_final_project/preprocessed_data_split_nona_02_28.pkl",
+	"data": "/Users/allisonlettiere/Documents/CS-224n-s-project/data/preprocessed_data_split_nona_02_28.pkl",
 	"dataaug": false,
 	"scheduler": true,
+	"dataset": "emotion",
 	"model": "linear_feedforward",
 	"batch_size": 32,
 	"num_workers": 8,
@@ -10,5 +11,5 @@
 	"lr": 1e-4,
 	"weight_decay": 1e-3,
 	"num_folds":1,
-	"checkpoint_dir": "/checkpoints/linear/"
+	"checkpoint_dir": "/Users/allisonlettiere/Documents/CS-224n-s-project/baseline/checkpoints/linear/"
 }
