@@ -10,5 +10,6 @@ class DenseNet(nn.Module):
         self.model.classifier = nn.Linear(1920, num_classes)
         
     def forward(self, x):
-        output = self.model(x)
+    	squeezed_input = x.squeeze(1).reshape(x.shape[0],-1)
+        output = self.model(squeezed_input)
         return output
