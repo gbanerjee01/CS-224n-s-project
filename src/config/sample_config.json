@@ -1,5 +1,5 @@
 {
-	"dataset_name": "Name of Dataset(ESC/UrbanSound/GTZAN)",
+	"dataset_name": "Name of Dataset",
 	"data_dir": "Path where the spectrograms are stored",
 	"dataaug": "true/false",
 	"pretrained": "true/false",
