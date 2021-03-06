@@ -25,7 +25,8 @@ if __name__ == "__main__":
     data = defaultdict(list)
 
     start = process_time()
-    for directory in os.listdir(wav_dir):
+    for i, directory in enumerate(os.listdir(wav_dir)):
+        print(f"Actor {i} parsing.")
         if os.path.isdir(os.path.join(wav_dir, directory)):
             for filename in os.listdir(os.path.join(wav_dir, directory)):
                 if filename.endswith(".wav"):
@@ -33,8 +34,8 @@ if __name__ == "__main__":
                     data['mel'].append(librosa.feature.melspectrogram(y=wav, sr=sr, n_mels=256, fmax=FMAX, n_fft=N_FFT))
                     data['mfcc'].append(librosa.feature.mfcc(wav, hop_length=HOP_LENGTH, n_mfcc=20, fmax=FMAX))
                     data['chromagram'].append(librosa.feature.chroma_stft(wav, sr=sr, hop_length=HOP_LENGTH, n_fft=N_FFT))
-                    data['spec_contrast'].append(librosa.feature.spectral_contrast(y=wav, sr=sample_rate, n_fft=N_FFT, hop_length=HOP_LENGTH)) #stft here instead of wav??
-                    data['tonnetz'].append(librosa.feature.tonnetz(y=librosa.effects.harmonic(wav), sr=sample_rate))
+                    data['spec_contrast'].append(librosa.feature.spectral_contrast(y=wav, sr=sr, n_fft=N_FFT, hop_length=HOP_LENGTH)) #stft here instead of wav??
+                    data['tonnetz'].append(librosa.feature.tonnetz(y=librosa.effects.harmonic(wav), sr=sr))
 
                     data['filename'].append(filename)
 
@@ -44,7 +45,8 @@ if __name__ == "__main__":
                     intensity = int(identifiers[3])
                     statement = int(identifiers[4])
                     repeat = int(identifiers[5])
-                    gender = int(identifiers[6]) % 2
+                    gender = int(identifiers[6][:2]) % 2 #only want the two digits, not the ".wav"; eg 01 is wanted not 01.wav
+                    
                     data['emotion'].append(emotion)
                     data['intensity'].append(intensity)
                     data['statement'].append(statement)
