@@ -2,10 +2,8 @@
 
 import os
 import librosa
-# import librosa.display
 import librosa.effects
 import librosa.util
-# also check you can import numpy and matplotlib, which are part of the␣ 􏰀→anaconda package
 import numpy as np
 import pickle
 from sklearn.model_selection import train_test_split
@@ -56,15 +54,6 @@ if __name__ == "__main__":
 
     print("elapsed " + str(end-start) + " seconds")
     
-#     f = open("preprocessed_data_3_6.pkl", "wb")
-#     pickle.dump(data, f)
-#     f.close()
-    
-#     f = open("preprocessed_data_03_6.pkl", "rb")
-#     data = pickle.load(f)
-#     f.close()
-#     print(data.keys())
-    
     
     for filename in data['filename']:
         identifiers = filename.split('-')
@@ -78,10 +67,6 @@ if __name__ == "__main__":
         data['statement'].append(statement)
         data['repeat'].append(repeat)
         data['gender'].append(gender)
-
-#     f = open("preprocessed_data_02_28.pkl", "wb")
-#     pickle.dump(data, f)
-#     f.close()
     
     df = pd.concat([
         pd.DataFrame(data['emotion']),
@@ -99,7 +84,6 @@ if __name__ == "__main__":
 
     df.columns = ['emotion', 'intensity', 'statement', 'repeat', 'gender', 'mel', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz', 'filename']
     
-#     df.head()
     temp = df.dropna()
     print(len(df), len(temp))
     
@@ -108,7 +92,6 @@ if __name__ == "__main__":
                                                         stratify=temp[['emotion', 'intensity', 'statement', 'repeat', 'gender']])
     val, test = train_test_split(val_test, test_size=0.5, random_state=42, 
                                                         stratify=temp[['emotion', 'intensity', 'statement', 'repeat', 'gender']])
-#     print(train.head()
 
     f = open("preprocessed_data_split_nona_03_06.pkl", "wb")
     pickle.dump((train, val, test), f)
