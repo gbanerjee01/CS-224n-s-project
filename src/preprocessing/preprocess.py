@@ -2,12 +2,11 @@
 
 import os
 import librosa
-import librosa.display
+# import librosa.display
 import librosa.effects
 import librosa.util
 # also check you can import numpy and matplotlib, which are part of the␣ 􏰀→anaconda package
 import numpy as np
-import matplotlib.pyplot as plt
 import pickle
 from sklearn.model_selection import train_test_split
 
