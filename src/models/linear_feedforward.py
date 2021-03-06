@@ -19,5 +19,5 @@ class LinearFeedForward(nn.Module):
 	def forward(self, x):
 		squeezed_input = x.squeeze(1).reshape(x.shape[0],-1)
 		logits = self.model(squeezed_input)
-		output = torch.softmax(logits, dim=1)
+		output = torch.softmax(logits, dim=1) #should be here since CELoss also does softmax
 		return output
