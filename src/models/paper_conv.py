@@ -4,12 +4,12 @@ import torch.nn.functional as F
 import torchvision.models as models
 import numpy as np
 
-class BasicConv(nn.Module):
+class PaperConv(nn.Module):
     def __init__(self, dataset):
         super().__init__()
         num_classes = 8  #8 emotions in RAVDESS -> edited here
         self.conv_model = nn.Sequential(
-        		nn.Conv1d(in_channels=, out_channels=256, kernel_size=5, stride=1),
+        		nn.Conv1d(in_channels=250, out_channels=256, kernel_size=5, stride=1), #is in_features right??
         		nn.ReLU(inplace=True),
 				nn.Dropout(0.1),
 			

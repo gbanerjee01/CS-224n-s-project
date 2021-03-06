@@ -106,7 +106,9 @@ if __name__ == "__main__":
             model = models.inception.Inception(params.dataset_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
             model = models.linear_feedforward.LinearFeedForward(params.dataset_name).to(device)
-
+        elif params.model=="paper_conv":
+            model = models.paper_conv.PaperConv(params.dataset_name).to(device)
+        
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
 

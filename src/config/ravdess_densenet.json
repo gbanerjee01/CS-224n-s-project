@@ -1,5 +1,5 @@
 {
-	"dataset_name": "RAVDESS",
+	"dataset_name": "densenet_original",
 	"data": "data/preprocessed_data_split_nona_02_28.pkl",
 	"dataaug": false,
 	"pretrained": true,
@@ -11,5 +11,5 @@
 	"lr": 1e-4,
     "weight_decay": 1e-3,
     "num_folds":1,
-    "checkpoint_dir": "checkpoints/densenet"
+    "checkpoint_dir": "checkpoints/densenet_original"
 }
