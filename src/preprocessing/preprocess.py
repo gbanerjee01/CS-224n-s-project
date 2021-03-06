@@ -1,6 +1,7 @@
 #preprocess.py - written by Justin Wang and Gaurab Banerjee
 
 import os
+import argparse
 import librosa
 import librosa.effects
 import librosa.util
@@ -11,6 +12,30 @@ from sklearn.model_selection import train_test_split
 from collections import defaultdict
 from time import process_time
 import pandas as pd
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('file_destination', type=str)
+args = parser.parse_args()
+
+
+def pad(df, col_names, input_len):
+    for col_name in col_names:
+        padded = []
+        max_len = 0
+        for idx in range(len(df)):
+            item = df.loc[idx, col_name]
+            max_len = max(max_len, item.shape[1])
+            if item.shape[1] >= input_len:
+                item = item[:input_len]
+            else:
+                temp = np.zeros((item.shape[0], input_len))
+                temp[:,:item.shape[1]] = item
+                item = temp
+            padded.append(item)
+        df[col_name + '_pad'] = padded
+
+    return df
 
 
 if __name__ == "__main__":
@@ -83,6 +108,7 @@ if __name__ == "__main__":
     ], axis=1)
 
     df.columns = ['emotion', 'intensity', 'statement', 'repeat', 'gender', 'mel', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz', 'filename']
+    df = pad(df, ['mel', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz'], input_len=250)
     
     temp = df.dropna()
     print(len(df), len(temp))
@@ -93,11 +119,13 @@ if __name__ == "__main__":
     val, test = train_test_split(val_test, test_size=0.5, random_state=42, 
                                                         stratify=temp[['emotion', 'intensity', 'statement', 'repeat', 'gender']])
 
-    f = open("preprocessed_data_split_nona_03_06.pkl", "wb")
+    f = open(args.file_destination, "wb")
     pickle.dump((train, val, test), f)
     f.close()
     
     #testing if opening fails
-    f = open("preprocessed_data_split_nona_02_28.pkl", "rb")
+    f = open(args.file_destination, "rb")
     train, val, test = pickle.load(f)
     f.close()
+
+
