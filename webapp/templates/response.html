@@ -1,0 +1,22 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %} 
+<h1>Respond to the bot!</h1>
+
+The assistant responds: {{ response }}
+
+<div id="controls">
+    <button id="recordButton">Record</button>
+    <button id="pauseButton" disabled>Pause</button>
+    <button id="stopButton" disabled>Stop</button>
+</div>
+<div id="formats">Format: start recording to see sample rate</div>
+<p><strong>Recordings:</strong></p>
+<ol id="recordingsList"></ol>
+
+<h2>Remember to please include this code {{ user_id }} in the url like this. http://.../{{ user_id }}</h2>
+
+<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+<script src="/static/js/app.js"></script>
+{% endblock %}
