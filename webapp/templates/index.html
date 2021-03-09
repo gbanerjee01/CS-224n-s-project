@@ -12,9 +12,16 @@
 <p><strong>Recordings:</strong></p>
 <ol id="recordingsList"></ol>
 
-<h2>Please go to {{ url }} now.</h2>
+<h2>Try to accomplish the task presented in the prompt area by asking the virtual assistant.</h2>
+
+Once you have done the task, click "Next Task" to proceed to the next task.
+If the assistant has made an error, you can correct it as if you were talking to a real human.
+
+Make sure you allow us to access your microphone for voice recognition.
 
 <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 <script src="/static/js/app.js"></script>
+
+<input type="submit" name="Next Task" value="next task">
 {% endblock %}
