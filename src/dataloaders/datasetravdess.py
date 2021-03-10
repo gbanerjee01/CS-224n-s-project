@@ -19,7 +19,7 @@ class RavdessDataset(Dataset):
     self.max_len = 0
     padded = []
     for idx in range(len(self.df)):
-      m = self.df.loc[idx, 'M']
+      m = self.df.loc[idx, 'mel']
       self.max_len = max(self.max_len, m.shape[1])
       if m.shape[1] >= input_len:
         m = m[:input_len]
@@ -28,7 +28,7 @@ class RavdessDataset(Dataset):
         temp[:,:m.shape[1]] = m
         m = temp
       padded.append(m)
-    self.df['M_pad'] = padded
+    self.df['mel_pad'] = padded
   
   def __len__(self):
     return len(self.df)
@@ -39,9 +39,9 @@ class RavdessDataset(Dataset):
     
     output_data = {}
     sample = {
-        'M': self.df.loc[idx, 'M_pad'],
-        'mfcc': self.df.loc[idx, 'mfcc'],
-        'chromagram': self.df.loc[idx, 'chromagram'],
+        'mel': self.df.loc[idx, 'mel_pad'],
+        'mfcc': self.df.loc[idx, 'mfcc_pad'],
+        'chromagram': self.df.loc[idx, 'chromagram_pad'],
         'emotion': self.df.loc[idx, 'emotion'],
         'intensity': self.df.loc[idx, 'intensity'],
         'statement': self.df.loc[idx, 'statement'],
@@ -50,7 +50,7 @@ class RavdessDataset(Dataset):
     }
 
     output_data = {}
-    values = sample["M"].reshape(-1, 256, self.length)
+    values = sample["mel"].reshape(-1, 256, self.length)
     values = torch.Tensor(values)
 
     target = torch.LongTensor([sample["emotion"]])

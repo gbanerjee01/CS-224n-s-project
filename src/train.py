@@ -10,9 +10,8 @@ import models.densenet
 import models.resnet
 import models.inception
 import models.linear_feedforward
+import models.simple_conv_network
 import time
-import dataloaders.datasetaug
-import dataloaders.datasetnormal
 import dataloaders.datasetravdess
 import pickle
 
@@ -108,6 +107,8 @@ if __name__ == "__main__":
             model = models.linear_feedforward.LinearFeedForward(params.dataset_name).to(device)
         elif params.model=="paper_conv":
             model = models.paper_conv.PaperConv(params.dataset_name).to(device)
+        elif params.model=="simple_conv_network":
+            model = models.simple_conv_network.ConvNetwork(params.dataset_name).to(device)
         
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)

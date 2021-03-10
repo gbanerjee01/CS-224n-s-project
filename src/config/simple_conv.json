@@ -1,0 +1,15 @@
+{
+	"dataset_name": "RAVDESS",
+	"data": "/Users/allisonlettiere/Downloads/preprocessed_data_split_nona_03_07.pkl",
+	"dataaug": false,
+	"scheduler": true,
+	"dataset": "emotion",
+	"model": "simple_conv_network",
+	"batch_size": 64,
+	"num_workers": 0,
+	"epochs": 70,
+	"lr": 1e-4,
+	"weight_decay": 1e-3,
+	"num_folds":1,
+	"checkpoint_dir": "/Users/allisonlettiere/Downloads/CS-224n-s-project/src/checkpoints/simple_conv_network/"
+}

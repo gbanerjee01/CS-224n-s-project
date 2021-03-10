@@ -1,0 +1,537 @@
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","Okay, ordering cheese to your address."
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","Okay, ordering cheese to your address."
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","Okay, ordering cheese to your address."
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","okay, messaging contact ""your address"", delivering dominoes cheese pizza"
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","okay, ordering movie 'cheese pizza by dominoes' to your address"
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","okay, navigating nearest route to order dominoes from your location"
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","I'm sorry, I cannot do that"
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","I'm sorry, I don't know how to do that"
+prompts/food.png,"Okay, placing an order for Domino's cheese pizza to be delivered to your address.","I'm sorry, I didn't catch that"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"okay, messaging contact ""your address"", delivering dominoes cheese pizza"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"okay, ordering movie 'cheese pizza by dominoes' to your address"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"okay, navigating nearest route to order dominoes from your location"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"I'm sorry, I cannot do that"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"I'm sorry, I don't know how to do that"
+prompts/food.png,I put in an order for Domino's cheese pizza to be delivered to your address.,"I'm sorry, I didn't catch that"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"Okay, ordering cheese to your address."
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"okay, messaging contact ""your address"", delivering dominoes cheese pizza"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"okay, ordering movie 'cheese pizza by dominoes' to your address"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"okay, navigating nearest route to order dominoes from your location"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"I'm sorry, I cannot do that"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"I'm sorry, I don't know how to do that"
+prompts/food.png,Your Domino's cheese pizza will be delivered in 45 minutes to your address.,"I'm sorry, I didn't catch that"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","Okay, the answer to your problem 2+1 is 3"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","Okay, solving 2 times 2 to get 4"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.",the answer is 6
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","okay, playing comedy special "" 2+2 is 4"" on netflix "
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","okay, ordering a 2x2 from home depot "
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","okay, opening 2 by 2: a home depot inside scoop by The New york times"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","I'm sorry, I cannot do that"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","I'm sorry, I don't know how to do that"
+prompts/calculator.png,"Okay, the answer to your problem 2 plus 2 is 4.","I'm sorry, I didn't catch that"
+prompts/calculator.png,2 plus 2 is 4,"Okay, the answer to your problem 2+1 is 3"
+prompts/calculator.png,2 plus 2 is 4,"Okay, solving 2 times 2 to get 4"
+prompts/calculator.png,2 plus 2 is 4,the answer is 6
+prompts/calculator.png,2 plus 2 is 4,"okay, playing comedy special "" 2+2 is 4"" on netflix "
+prompts/calculator.png,2 plus 2 is 4,"okay, ordering a 2x2 from home depot "
+prompts/calculator.png,2 plus 2 is 4,"okay, opening 2 by 2: a home depot inside scoop by The New york times"
+prompts/calculator.png,2 plus 2 is 4,"I'm sorry, I cannot do that"
+prompts/calculator.png,2 plus 2 is 4,"I'm sorry, I don't know how to do that"
+prompts/calculator.png,2 plus 2 is 4,"I'm sorry, I didn't catch that"
+prompts/calculator.png,The sum of 2 plus 2 is 4,"Okay, the answer to your problem 2+1 is 3"
+prompts/calculator.png,The sum of 2 plus 2 is 4,"Okay, solving 2 times 2 to get 4"
+prompts/calculator.png,The sum of 2 plus 2 is 4,the answer is 6
+prompts/calculator.png,The sum of 2 plus 2 is 4,"okay, playing comedy special "" 2+2 is 4"" on netflix "
+prompts/calculator.png,The sum of 2 plus 2 is 4,"okay, ordering a 2x2 from home depot "
+prompts/calculator.png,The sum of 2 plus 2 is 4,"okay, opening 2 by 2: a home depot inside scoop by The New york times"
+prompts/calculator.png,The sum of 2 plus 2 is 4,"I'm sorry, I cannot do that"
+prompts/calculator.png,The sum of 2 plus 2 is 4,"I'm sorry, I don't know how to do that"
+prompts/calculator.png,The sum of 2 plus 2 is 4,"I'm sorry, I didn't catch that"
+prompts/news.png,"Okay, reading the article from the New York Times",Reading the article from New York Post 
+prompts/news.png,"Okay, reading the article from the New York Times","Ok, opening the News app to the Wall Street Journal"
+prompts/news.png,"Okay, reading the article from the New York Times","Ok, opening to the New York Magazine"
+prompts/news.png,"Okay, reading the article from the New York Times","okay, searching for new music from the ' York Times ' "
+prompts/news.png,"Okay, reading the article from the New York Times","okay, ordering new york sub to your address"
+prompts/news.png,"Okay, reading the article from the New York Times","okay, playing 'empire state of mind' by jay-z"
+prompts/news.png,"Okay, reading the article from the New York Times","I'm sorry, I cannot do that"
+prompts/news.png,"Okay, reading the article from the New York Times","I'm sorry, I don't know how to do that"
+prompts/news.png,"Okay, reading the article from the New York Times","I'm sorry, I didn't catch that"
+prompts/news.png,Searching for an article from the New York Times,Reading the article from New York Post 
+prompts/news.png,Searching for an article from the New York Times,"Ok, opening the News app to the Wall Street Journal"
+prompts/news.png,Searching for an article from the New York Times,"Ok, opening to the New York Magazine"
+prompts/news.png,Searching for an article from the New York Times,"okay, searching for new music from the ' York Times ' "
+prompts/news.png,Searching for an article from the New York Times,"okay, ordering new york sub to your address"
+prompts/news.png,Searching for an article from the New York Times,"okay, playing 'empire state of mind' by jay-z"
+prompts/news.png,Searching for an article from the New York Times,"I'm sorry, I cannot do that"
+prompts/news.png,Searching for an article from the New York Times,"I'm sorry, I don't know how to do that"
+prompts/news.png,Searching for an article from the New York Times,"I'm sorry, I didn't catch that"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times",Reading the article from New York Post 
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","Ok, opening the News app to the Wall Street Journal"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","Ok, opening to the New York Magazine"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","okay, searching for new music from the ' York Times ' "
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","okay, ordering new york sub to your address"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","okay, playing 'empire state of mind' by jay-z"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","I'm sorry, I cannot do that"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","I'm sorry, I don't know how to do that"
+prompts/news.png,"Alright, I'm searching the web for an article from the New York Times","I'm sorry, I didn't catch that"
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.",I have booked your plane tickets to San Francisco on March 1st at 9 PM
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.",I have booked your plane tickets to Stanford on May 2nd
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.",I have booked your plane tickets to San Francisco on March 20th
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.",ordering book : san francisco flights
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.",setting a meeting titled : san francisco for march 1st
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.", playing song: marching first to san francisco
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.","I'm sorry, I cannot do that"
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.","I'm sorry, I don't know how to do that"
+prompts/flight.png,"Okay, I have booked your plane ticket to San Francisco on March 1st at 9 AM.","I'm sorry, I didn't catch that"
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,I have booked your plane tickets to San Francisco on March 1st at 9 PM
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,I have booked your plane tickets to Stanford on May 2nd
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,I have booked your plane tickets to San Francisco on March 20th
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,ordering book : san francisco flights
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,setting a meeting titled : san francisco for march 1st
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked, playing song: marching first to san francisco
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,"I'm sorry, I cannot do that"
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,"I'm sorry, I don't know how to do that"
+prompts/flight.png,Your flight to San Francisco on March 1st at 9 AM has been booked,"I'm sorry, I didn't catch that"
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,I have booked your plane tickets to San Francisco on March 1st at 9 PM
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,I have booked your plane tickets to Stanford on May 2nd
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,I have booked your plane tickets to San Francisco on March 20th
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,ordering book : san francisco flights
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,setting a meeting titled : san francisco for march 1st
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st, playing song: marching first to san francisco
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,"I'm sorry, I cannot do that"
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,"I'm sorry, I don't know how to do that"
+prompts/flight.png,I went ahead and booked your nine in the morning flight to San Francisco on March 1st,"I'm sorry, I didn't catch that"
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,I am adding an event on Jan 12 to your calendar
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,I will set a an event for Feb 1
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,Calendar event set for Jan 20th
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,I am adding an event on 
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar., to your calendar.
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,"I'm sorry, I cannot do that"
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,"I'm sorry, I don't know how to do that"
+prompts/calendar.png,I am adding a meeting on January 11th to your calendar.,"I'm sorry, I didn't catch that"
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.",I am adding an event on Jan 12 to your calendar
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.",I will set a an event for Feb 1
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.",Calendar event set for Jan 20th
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.",I am adding an event on 
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.", to your calendar.
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.","I'm sorry, I cannot do that"
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.","I'm sorry, I don't know how to do that"
+prompts/calendar.png,"Alright, I put the meeting for January 11th at 4 PM in your calendar.","I'm sorry, I didn't catch that"
+prompts/calendar.png,A 4PM meeting has been added to your calendar,I am adding an event on Jan 12 to your calendar
+prompts/calendar.png,A 4PM meeting has been added to your calendar,I will set a an event for Feb 1
+prompts/calendar.png,A 4PM meeting has been added to your calendar,Calendar event set for Jan 20th
+prompts/calendar.png,A 4PM meeting has been added to your calendar,I am adding an event on 
+prompts/calendar.png,A 4PM meeting has been added to your calendar, to your calendar.
+prompts/calendar.png,A 4PM meeting has been added to your calendar,"I'm sorry, I cannot do that"
+prompts/calendar.png,A 4PM meeting has been added to your calendar,"I'm sorry, I don't know how to do that"
+prompts/calendar.png,A 4PM meeting has been added to your calendar,"I'm sorry, I didn't catch that"
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'","Alright, your message is being sent to John saying Hello Jamie"
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'","Alright, would you like to send Jamie a message saying Hell"
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'",Message sending to Jamie saying how are you
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'",ordering a massage for jamie 
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'",buying movie: Hell and massages for jamie
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'",ordering recipe from jamie's massage blog: Hell's angel fruit cake
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'","I'm sorry, I cannot do that"
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'","I'm sorry, I don't know how to do that"
+prompts/message.png,"Alright, your message to Jamie says 'Hello Jamie'","I'm sorry, I didn't catch that"
+prompts/message.png,Your message to Jamie says 'Hello Jamie',"Alright, your message is being sent to John saying Hello Jamie"
+prompts/message.png,Your message to Jamie says 'Hello Jamie',"Alright, would you like to send Jamie a message saying Hell"
+prompts/message.png,Your message to Jamie says 'Hello Jamie',Message sending to Jamie saying how are you
+prompts/message.png,Your message to Jamie says 'Hello Jamie',ordering a massage for jamie 
+prompts/message.png,Your message to Jamie says 'Hello Jamie',buying movie: Hell and massages for jamie
+prompts/message.png,Your message to Jamie says 'Hello Jamie',ordering recipe from jamie's massage blog: Hell's angel fruit cake
+prompts/message.png,Your message to Jamie says 'Hello Jamie',"I'm sorry, I cannot do that"
+prompts/message.png,Your message to Jamie says 'Hello Jamie',"I'm sorry, I don't know how to do that"
+prompts/message.png,Your message to Jamie says 'Hello Jamie',"I'm sorry, I didn't catch that"
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',"Alright, your message is being sent to John saying Hello Jamie"
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',"Alright, would you like to send Jamie a message saying Hell"
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',Message sending to Jamie saying how are you
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',ordering a massage for jamie 
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',buying movie: Hell and massages for jamie
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',ordering recipe from jamie's massage blog: Hell's angel fruit cake
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',"I'm sorry, I cannot do that"
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',"I'm sorry, I don't know how to do that"
+prompts/message.png,I sent your message to Jamie that says 'Hello Jamie',"I'm sorry, I didn't catch that"
+prompts/call.png,"Okay, calling John.","Okay, calling Jim"
+prompts/call.png,"Okay, calling John.","Perfect, calling Jamie"
+prompts/call.png,"Okay, calling John.",Would you like to call Timothy White?
+prompts/call.png,"Okay, calling John.",playing movie: calling john
+prompts/call.png,"Okay, calling John.",ordering Long-John-Silver On-Call Special to your address
+prompts/call.png,"Okay, calling John.",inviting john to ball
+prompts/call.png,"Okay, calling John.","I'm sorry, I cannot do that"
+prompts/call.png,"Okay, calling John.","I'm sorry, I don't know how to do that"
+prompts/call.png,"Okay, calling John.","I'm sorry, I didn't catch that"
+prompts/call.png,"Alright, calling John.","Okay, calling Jim"
+prompts/call.png,"Alright, calling John.","Perfect, calling Jamie"
+prompts/call.png,"Alright, calling John.",Would you like to call Timothy White?
+prompts/call.png,"Alright, calling John.",playing movie: calling john
+prompts/call.png,"Alright, calling John.",ordering Long-John-Silver On-Call Special to your address
+prompts/call.png,"Alright, calling John.",inviting john to ball
+prompts/call.png,"Alright, calling John.","I'm sorry, I cannot do that"
+prompts/call.png,"Alright, calling John.","I'm sorry, I don't know how to do that"
+prompts/call.png,"Alright, calling John.","I'm sorry, I didn't catch that"
+prompts/call.png,Calling John,"Okay, calling Jim"
+prompts/call.png,Calling John,"Perfect, calling Jamie"
+prompts/call.png,Calling John,Would you like to call Timothy White?
+prompts/call.png,Calling John,playing movie: calling john
+prompts/call.png,Calling John,ordering Long-John-Silver On-Call Special to your address
+prompts/call.png,Calling John,inviting john to ball
+prompts/call.png,Calling John,"I'm sorry, I cannot do that"
+prompts/call.png,Calling John,"I'm sorry, I don't know how to do that"
+prompts/call.png,Calling John,"I'm sorry, I didn't catch that"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify","Okay, playing the Hello by Adele"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify"," Okay, playing Here Comes the Sun by the Beatles"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify",Would you like to play the song Something by the Beatles?
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify","messaging jude, heyy"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify",opening article: Hey Jude- the authoritative literary analysis by Vox
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify",ordering hey Jude: collector's edition
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify","I'm sorry, I cannot do that"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify","I'm sorry, I don't know how to do that"
+prompts/music.png,"Okay, playing the song Hey Jude by the Beatles on Spotify","I'm sorry, I didn't catch that"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,"Okay, playing the Hello by Adele"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles," Okay, playing Here Comes the Sun by the Beatles"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,Would you like to play the song Something by the Beatles?
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,"messaging jude, heyy"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,opening article: Hey Jude- the authoritative literary analysis by Vox
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,ordering hey Jude: collector's edition
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,"I'm sorry, I cannot do that"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,"I'm sorry, I don't know how to do that"
+prompts/music.png,Opening Spotify to play Hey Jude by the Beatles,"I'm sorry, I didn't catch that"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify","Okay, playing the Hello by Adele"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify"," Okay, playing Here Comes the Sun by the Beatles"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify",Would you like to play the song Something by the Beatles?
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify","messaging jude, heyy"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify",opening article: Hey Jude- the authoritative literary analysis by Vox
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify",ordering hey Jude: collector's edition
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify","I'm sorry, I cannot do that"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify","I'm sorry, I don't know how to do that"
+prompts/music.png,"Alright, I'll play Hey Jude by the Beatles on Spotify","I'm sorry, I didn't catch that"
+prompts/timer.png,"Okay, setting a timer for 15 minutes.","Okay, setting a timer for twelve seconds"
+prompts/timer.png,"Okay, setting a timer for 15 minutes.","Perfect, setting a timer for 15 seconds"
+prompts/timer.png,"Okay, setting a timer for 15 minutes.",Sounds good. 14 seconds and counting.
+prompts/timer.png,"Okay, setting a timer for 15 minutes.",ok setting an alarm for 00:15
+prompts/timer.png,"Okay, setting a timer for 15 minutes.",playing 60 minutes short miniseries: a timer for 15 minutes
+prompts/timer.png,"Okay, setting a timer for 15 minutes.",searching for 15-minute recipes
+prompts/timer.png,"Okay, setting a timer for 15 minutes.","I'm sorry, I cannot do that"
+prompts/timer.png,"Okay, setting a timer for 15 minutes.","I'm sorry, I don't know how to do that"
+prompts/timer.png,"Okay, setting a timer for 15 minutes.","I'm sorry, I didn't catch that"
+prompts/timer.png,Setting a timer for 15 minutes,"Okay, setting a timer for twelve seconds"
+prompts/timer.png,Setting a timer for 15 minutes,"Perfect, setting a timer for 15 seconds"
+prompts/timer.png,Setting a timer for 15 minutes,Sounds good. 14 seconds and counting.
+prompts/timer.png,Setting a timer for 15 minutes,ok setting an alarm for 00:15
+prompts/timer.png,Setting a timer for 15 minutes,playing 60 minutes short miniseries: a timer for 15 minutes
+prompts/timer.png,Setting a timer for 15 minutes,searching for 15-minute recipes
+prompts/timer.png,Setting a timer for 15 minutes,"I'm sorry, I cannot do that"
+prompts/timer.png,Setting a timer for 15 minutes,"I'm sorry, I don't know how to do that"
+prompts/timer.png,Setting a timer for 15 minutes,"I'm sorry, I didn't catch that"
+prompts/timer.png,I started a 15 minute timer,"Okay, setting a timer for twelve seconds"
+prompts/timer.png,I started a 15 minute timer,"Perfect, setting a timer for 15 seconds"
+prompts/timer.png,I started a 15 minute timer,Sounds good. 14 seconds and counting.
+prompts/timer.png,I started a 15 minute timer,ok setting an alarm for 00:15
+prompts/timer.png,I started a 15 minute timer,playing 60 minutes short miniseries: a timer for 15 minutes
+prompts/timer.png,I started a 15 minute timer,searching for 15-minute recipes
+prompts/timer.png,I started a 15 minute timer,"I'm sorry, I cannot do that"
+prompts/timer.png,I started a 15 minute timer,"I'm sorry, I don't know how to do that"
+prompts/timer.png,I started a 15 minute timer,"I'm sorry, I didn't catch that"
+prompts/podcast.png,Playing the podcast This American Life,"Perfect, playing This is America"
+prompts/podcast.png,Playing the podcast This American Life,Would you like me to play This is Life by Lisa Ling?
+prompts/podcast.png,Playing the podcast This American Life,"Ok, starting The American Story"
+prompts/podcast.png,Playing the podcast This American Life,opening article : why you should listen to this american life
+prompts/podcast.png,Playing the podcast This American Life,messaging 'this american life' to contact 'podcasts
+prompts/podcast.png,Playing the podcast This American Life,ordering this american sub to your house
+prompts/podcast.png,Playing the podcast This American Life,"I'm sorry, I cannot do that"
+prompts/podcast.png,Playing the podcast This American Life,"I'm sorry, I don't know how to do that"
+prompts/podcast.png,Playing the podcast This American Life,"I'm sorry, I didn't catch that"
+prompts/podcast.png,I'll play This American Life in the Podcast app,"Perfect, playing This is America"
+prompts/podcast.png,I'll play This American Life in the Podcast app,Would you like me to play This is Life by Lisa Ling?
+prompts/podcast.png,I'll play This American Life in the Podcast app,"Ok, starting The American Story"
+prompts/podcast.png,I'll play This American Life in the Podcast app,opening article : why you should listen to this american life
+prompts/podcast.png,I'll play This American Life in the Podcast app,messaging 'this american life' to contact 'podcasts
+prompts/podcast.png,I'll play This American Life in the Podcast app,ordering this american sub to your house
+prompts/podcast.png,I'll play This American Life in the Podcast app,"I'm sorry, I cannot do that"
+prompts/podcast.png,I'll play This American Life in the Podcast app,"I'm sorry, I don't know how to do that"
+prompts/podcast.png,I'll play This American Life in the Podcast app,"I'm sorry, I didn't catch that"
+prompts/podcast.png,Playing This American Life,"Perfect, playing This is America"
+prompts/podcast.png,Playing This American Life,Would you like me to play This is Life by Lisa Ling?
+prompts/podcast.png,Playing This American Life,"Ok, starting The American Story"
+prompts/podcast.png,Playing This American Life,opening article : why you should listen to this american life
+prompts/podcast.png,Playing This American Life,messaging 'this american life' to contact 'podcasts
+prompts/podcast.png,Playing This American Life,ordering this american sub to your house
+prompts/podcast.png,Playing This American Life,"I'm sorry, I cannot do that"
+prompts/podcast.png,Playing This American Life,"I'm sorry, I don't know how to do that"
+prompts/podcast.png,Playing This American Life,"I'm sorry, I didn't catch that"
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,It looks to be sunny in Thailand tomorrow
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,"At your current location, it will be raining in 5 hours"
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,"In Toronto, the weather looks nice and warm"
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,playing movie: tokyo tomorrow
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,opening article: Shinzo abe's tokyo of tomorrow
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,ordering tickets to Tokyo for tomorrow
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,"I'm sorry, I cannot do that"
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,"I'm sorry, I don't know how to do that"
+prompts/weather.png,Tomorrow it will be sunny and 75 degrees in Tokyo,"I'm sorry, I didn't catch that"
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,It looks to be sunny in Thailand tomorrow
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,"At your current location, it will be raining in 5 hours"
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,"In Toronto, the weather looks nice and warm"
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,playing movie: tokyo tomorrow
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,opening article: Shinzo abe's tokyo of tomorrow
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,ordering tickets to Tokyo for tomorrow
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,"I'm sorry, I cannot do that"
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,"I'm sorry, I don't know how to do that"
+prompts/weather.png,Tomorrow will be cloudy and 60 in Tokyo,"I'm sorry, I didn't catch that"
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,It looks to be sunny in Thailand tomorrow
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,"At your current location, it will be raining in 5 hours"
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,"In Toronto, the weather looks nice and warm"
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,playing movie: tokyo tomorrow
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,opening article: Shinzo abe's tokyo of tomorrow
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,ordering tickets to Tokyo for tomorrow
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,"I'm sorry, I cannot do that"
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,"I'm sorry, I don't know how to do that"
+prompts/weather.png,Tomorrow in Tokyo will be rainy and 40 degrees,"I'm sorry, I didn't catch that"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","Ok, telling you where to find a joker"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","Ok, explaining the process behind making Coke"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","Unsure if you are broke, would you like me to check your bank account"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw",ok opening article: 36 jokes for 2021
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw",playing comedy short: life's a joke
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw",send message 'joke' to mom
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","I'm sorry, I cannot do that"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","I'm sorry, I don't know how to do that"
+prompts/joke.png,"What kind of sugar does Lady Gaga put in her coffee? Raw raw, raw raw raw","I'm sorry, I didn't catch that"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"Ok, telling you where to find a joker"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"Ok, explaining the process behind making Coke"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"Unsure if you are broke, would you like me to check your bank account"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,ok opening article: 36 jokes for 2021
+prompts/joke.png,What did the 0 say to the 8? Nice belt,playing comedy short: life's a joke
+prompts/joke.png,What did the 0 say to the 8? Nice belt,send message 'joke' to mom
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"I'm sorry, I cannot do that"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"I'm sorry, I don't know how to do that"
+prompts/joke.png,What did the 0 say to the 8? Nice belt,"I'm sorry, I didn't catch that"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","Ok, telling you where to find a joker"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","Ok, explaining the process behind making Coke"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","Unsure if you are broke, would you like me to check your bank account"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?",ok opening article: 36 jokes for 2021
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?",playing comedy short: life's a joke
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?",send message 'joke' to mom
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","I'm sorry, I cannot do that"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","I'm sorry, I don't know how to do that"
+prompts/joke.png,"How do astronauts blow their noses in space? Well, it’s snot rocket science?","I'm sorry, I didn't catch that"
+prompts/question.png,There are 50 states in the United States,Finding the number of states in Mexico
+prompts/question.png,There are 50 states in the United States,"Ok, would you like me to find the largest state in the US"
+prompts/question.png,There are 50 states in the United States,Finding the number of nation-states in the EU
+prompts/question.png,There are 50 states in the United States,"there are three states of matter in america: solid, liquid, gas"
+prompts/question.png,There are 50 states in the United States,"there are four states in Avatar: earth, air, water, fire, but that was before the fire nation attacked"
+prompts/question.png,There are 50 states in the United States,america's states were originally 13 colonies
+prompts/question.png,There are 50 states in the United States,"I'm sorry, I cannot do that"
+prompts/question.png,There are 50 states in the United States,"I'm sorry, I don't know how to do that"
+prompts/question.png,There are 50 states in the United States,"I'm sorry, I didn't catch that"
+prompts/question.png,The United States of America has 50 states,Finding the number of states in Mexico
+prompts/question.png,The United States of America has 50 states,"Ok, would you like me to find the largest state in the US"
+prompts/question.png,The United States of America has 50 states,Finding the number of nation-states in the EU
+prompts/question.png,The United States of America has 50 states,"there are three states of matter in america: solid, liquid, gas"
+prompts/question.png,The United States of America has 50 states,"there are four states in Avatar: earth, air, water, fire, but that was before the fire nation attacked"
+prompts/question.png,The United States of America has 50 states,america's states were originally 13 colonies
+prompts/question.png,The United States of America has 50 states,"I'm sorry, I cannot do that"
+prompts/question.png,The United States of America has 50 states,"I'm sorry, I don't know how to do that"
+prompts/question.png,The United States of America has 50 states,"I'm sorry, I didn't catch that"
+prompts/question.png,There are 50 states,Finding the number of states in Mexico
+prompts/question.png,There are 50 states,"Ok, would you like me to find the largest state in the US"
+prompts/question.png,There are 50 states,Finding the number of nation-states in the EU
+prompts/question.png,There are 50 states,"there are three states of matter in america: solid, liquid, gas"
+prompts/question.png,There are 50 states,"there are four states in Avatar: earth, air, water, fire, but that was before the fire nation attacked"
+prompts/question.png,There are 50 states,america's states were originally 13 colonies
+prompts/question.png,There are 50 states,"I'm sorry, I cannot do that"
+prompts/question.png,There are 50 states,"I'm sorry, I don't know how to do that"
+prompts/question.png,There are 50 states,"I'm sorry, I didn't catch that"
+prompts/garage.png,Unlocking your garage,Unlocking the bedroom door
+prompts/garage.png,Unlocking your garage,"Ok, I will unlock the front door"
+prompts/garage.png,Unlocking your garage,"Perfect, unlocking the back door now."
+prompts/garage.png,Unlocking your garage,opening article: the eternal influence of locke
+prompts/garage.png,Unlocking your garage,playing denzel curry's UNLOCKED in GarageBand
+prompts/garage.png,Unlocking your garage,ordering lock-and-seal for garage
+prompts/garage.png,Unlocking your garage,"I'm sorry, I cannot do that"
+prompts/garage.png,Unlocking your garage,"I'm sorry, I don't know how to do that"
+prompts/garage.png,Unlocking your garage,"I'm sorry, I didn't catch that"
+prompts/garage.png,The garage is unlocked,Unlocking the bedroom door
+prompts/garage.png,The garage is unlocked,"Ok, I will unlock the front door"
+prompts/garage.png,The garage is unlocked,"Perfect, unlocking the back door now."
+prompts/garage.png,The garage is unlocked,opening article: the eternal influence of locke
+prompts/garage.png,The garage is unlocked,playing denzel curry's UNLOCKED in GarageBand
+prompts/garage.png,The garage is unlocked,ordering lock-and-seal for garage
+prompts/garage.png,The garage is unlocked,"I'm sorry, I cannot do that"
+prompts/garage.png,The garage is unlocked,"I'm sorry, I don't know how to do that"
+prompts/garage.png,The garage is unlocked,"I'm sorry, I didn't catch that"
+prompts/garage.png,"Okay, I will unlock the home garage",Unlocking the bedroom door
+prompts/garage.png,"Okay, I will unlock the home garage","Ok, I will unlock the front door"
+prompts/garage.png,"Okay, I will unlock the home garage","Perfect, unlocking the back door now."
+prompts/garage.png,"Okay, I will unlock the home garage",opening article: the eternal influence of locke
+prompts/garage.png,"Okay, I will unlock the home garage",playing denzel curry's UNLOCKED in GarageBand
+prompts/garage.png,"Okay, I will unlock the home garage",ordering lock-and-seal for garage
+prompts/garage.png,"Okay, I will unlock the home garage","I'm sorry, I cannot do that"
+prompts/garage.png,"Okay, I will unlock the home garage","I'm sorry, I don't know how to do that"
+prompts/garage.png,"Okay, I will unlock the home garage","I'm sorry, I didn't catch that"
+prompts/show.png,Playing Breaking Bad on Netflix,"Ok, playing Breaking News on Netflix"
+prompts/show.png,Playing Breaking Bad on Netflix,Opening the Netflix app to The Break
+prompts/show.png,Playing Breaking Bad on Netflix,Now playing the Break Room on Netflix
+prompts/show.png,Playing Breaking Bad on Netflix,ordering net-caught broken bad clams to your address
+prompts/show.png,Playing Breaking Bad on Netflix,opening article: what breaking bad's walter white has to do with walt whitman
+prompts/show.png,Playing Breaking Bad on Netflix,buying tickets for alburquerque new mexico -breaking bad shooting location
+prompts/show.png,Playing Breaking Bad on Netflix,"I'm sorry, I cannot do that"
+prompts/show.png,Playing Breaking Bad on Netflix,"I'm sorry, I don't know how to do that"
+prompts/show.png,Playing Breaking Bad on Netflix,"I'm sorry, I didn't catch that"
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,"Ok, playing Breaking News on Netflix"
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,Opening the Netflix app to The Break
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,Now playing the Break Room on Netflix
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,ordering net-caught broken bad clams to your address
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,opening article: what breaking bad's walter white has to do with walt whitman
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,buying tickets for alburquerque new mexico -breaking bad shooting location
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,"I'm sorry, I cannot do that"
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,"I'm sorry, I don't know how to do that"
+prompts/show.png,Opening Netflix to play the next episode of Breaking Bad,"I'm sorry, I didn't catch that"
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,","Ok, playing Breaking News on Netflix"
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,",Opening the Netflix app to The Break
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,",Now playing the Break Room on Netflix
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,",ordering net-caught broken bad clams to your address
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,",opening article: what breaking bad's walter white has to do with walt whitman
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,",buying tickets for alburquerque new mexico -breaking bad shooting location
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,","I'm sorry, I cannot do that"
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,","I'm sorry, I don't know how to do that"
+prompts/show.png,"Okay, I'll open Netflix to play Breaking Bad,","I'm sorry, I didn't catch that"
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper",Buying a washcloth from Costco
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper",Buying toilet paper from Amazon
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper","Ok, purchasing printer paper from the store"
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper",opening article: its impossible to buy toilet paper in 2020
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper",playing podcast: toilet paper creations for 2020
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper",playing movie the toilet papers: a panama paper spoof
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper","I'm sorry, I cannot do that"
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper","I'm sorry, I don't know how to do that"
+prompts/shopping.png,"Okay, purchasing a roll of toilet paper","I'm sorry, I didn't catch that"
+prompts/shopping.png,Buying a roll of toilet paper,Buying a washcloth from Costco
+prompts/shopping.png,Buying a roll of toilet paper,Buying toilet paper from Amazon
+prompts/shopping.png,Buying a roll of toilet paper,"Ok, purchasing printer paper from the store"
+prompts/shopping.png,Buying a roll of toilet paper,opening article: its impossible to buy toilet paper in 2020
+prompts/shopping.png,Buying a roll of toilet paper,playing podcast: toilet paper creations for 2020
+prompts/shopping.png,Buying a roll of toilet paper,playing movie the toilet papers: a panama paper spoof
+prompts/shopping.png,Buying a roll of toilet paper,"I'm sorry, I cannot do that"
+prompts/shopping.png,Buying a roll of toilet paper,"I'm sorry, I don't know how to do that"
+prompts/shopping.png,Buying a roll of toilet paper,"I'm sorry, I didn't catch that"
+prompts/shopping.png,I will purchase the roll,Buying a washcloth from Costco
+prompts/shopping.png,I will purchase the roll,Buying toilet paper from Amazon
+prompts/shopping.png,I will purchase the roll,"Ok, purchasing printer paper from the store"
+prompts/shopping.png,I will purchase the roll,opening article: its impossible to buy toilet paper in 2020
+prompts/shopping.png,I will purchase the roll,playing podcast: toilet paper creations for 2020
+prompts/shopping.png,I will purchase the roll,playing movie the toilet papers: a panama paper spoof
+prompts/shopping.png,I will purchase the roll,"I'm sorry, I cannot do that"
+prompts/shopping.png,I will purchase the roll,"I'm sorry, I don't know how to do that"
+prompts/shopping.png,I will purchase the roll,"I'm sorry, I didn't catch that"
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,The trip to San Jose will take 10 min
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,"By plane, the trip to San Jose, Costa Rica will be 10 hours"
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,"Due to heavy traffic, going to Santa Theresa, California will require 8 hours"
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,opening the newest article from the San Francisco Inquirer
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,searching for films about San Francisco
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,checking the weather in San Francisco
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,"I'm sorry, I cannot do that"
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,"I'm sorry, I don't know how to do that"
+prompts/map.png,It look like it will take about 45 minutes to get to San Francisco,"I'm sorry, I didn't catch that"
+prompts/map.png,The trip to San Francisco will be 45 minutes,The trip to San Jose will take 10 min
+prompts/map.png,The trip to San Francisco will be 45 minutes,"By plane, the trip to San Jose, Costa Rica will be 10 hours"
+prompts/map.png,The trip to San Francisco will be 45 minutes,"Due to heavy traffic, going to Santa Theresa, California will require 8 hours"
+prompts/map.png,The trip to San Francisco will be 45 minutes,opening the newest article from the San Francisco Inquirer
+prompts/map.png,The trip to San Francisco will be 45 minutes,searching for films about San Francisco
+prompts/map.png,The trip to San Francisco will be 45 minutes,checking the weather in San Francisco
+prompts/map.png,The trip to San Francisco will be 45 minutes,"I'm sorry, I cannot do that"
+prompts/map.png,The trip to San Francisco will be 45 minutes,"I'm sorry, I don't know how to do that"
+prompts/map.png,The trip to San Francisco will be 45 minutes,"I'm sorry, I didn't catch that"
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours",The trip to San Jose will take 10 min
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours","By plane, the trip to San Jose, Costa Rica will be 10 hours"
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours","Due to heavy traffic, going to Santa Theresa, California will require 8 hours"
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours",opening the newest article from the San Francisco Inquirer
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours",searching for films about San Francisco
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours",checking the weather in San Francisco
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours","I'm sorry, I cannot do that"
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours","I'm sorry, I don't know how to do that"
+prompts/map.png,"There is heavy traffic, so the drive to San Francisco will be two hours","I'm sorry, I didn't catch that"
+prompts/reminder.png,Setting a reminder to brush teeth tonight,Remind me to wash my bathroom
+prompts/reminder.png,Setting a reminder to brush teeth tonight,Remind me to buy a toothbrush
+prompts/reminder.png,Setting a reminder to brush teeth tonight,Setting a reminder to clean your tooth brush now
+prompts/reminder.png,Setting a reminder to brush teeth tonight,ordering tooth brush on Amazon
+prompts/reminder.png,Setting a reminder to brush teeth tonight,playing song 'tonight' by the toothbrushe
+prompts/reminder.png,Setting a reminder to brush teeth tonight,opening article: the toothbrush economy from The Economist
+prompts/reminder.png,Setting a reminder to brush teeth tonight,"I'm sorry, I cannot do that"
+prompts/reminder.png,Setting a reminder to brush teeth tonight,"I'm sorry, I don't know how to do that"
+prompts/reminder.png,Setting a reminder to brush teeth tonight,"I'm sorry, I didn't catch that"
+prompts/reminder.png,Your reminder to brush teeth tonight is set,Remind me to wash my bathroom
+prompts/reminder.png,Your reminder to brush teeth tonight is set,Remind me to buy a toothbrush
+prompts/reminder.png,Your reminder to brush teeth tonight is set,Setting a reminder to clean your tooth brush now
+prompts/reminder.png,Your reminder to brush teeth tonight is set,ordering tooth brush on Amazon
+prompts/reminder.png,Your reminder to brush teeth tonight is set,playing song 'tonight' by the toothbrushe
+prompts/reminder.png,Your reminder to brush teeth tonight is set,opening article: the toothbrush economy from The Economist
+prompts/reminder.png,Your reminder to brush teeth tonight is set,"I'm sorry, I cannot do that"
+prompts/reminder.png,Your reminder to brush teeth tonight is set,"I'm sorry, I don't know how to do that"
+prompts/reminder.png,Your reminder to brush teeth tonight is set,"I'm sorry, I didn't catch that"
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,Remind me to wash my bathroom
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,Remind me to buy a toothbrush
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,Setting a reminder to clean your tooth brush now
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,ordering tooth brush on Amazon
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,playing song 'tonight' by the toothbrushe
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,opening article: the toothbrush economy from The Economist
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,"I'm sorry, I cannot do that"
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,"I'm sorry, I don't know how to do that"
+prompts/reminder.png,I've added a reminder for tonight to brush teeth,"I'm sorry, I didn't catch that"
+prompts/recipe.png,Searching for a recipe for cake on the internet,Searching the web for a recipe on Coke
+prompts/recipe.png,Searching for a recipe for cake on the internet,"Ok, finding a good corn bread recipe"
+prompts/recipe.png,Searching for a recipe for cake on the internet,Would you like to search the web for a bread recipe
+prompts/recipe.png,Searching for a recipe for cake on the internet,playing horror movie: a new recipe for cake
+prompts/recipe.png,Searching for a recipe for cake on the internet,playing podcast: how to bake a cake
+prompts/recipe.png,Searching for a recipe for cake on the internet,opening article: around the world in 30 cakes
+prompts/recipe.png,Searching for a recipe for cake on the internet,"I'm sorry, I cannot do that"
+prompts/recipe.png,Searching for a recipe for cake on the internet,"I'm sorry, I don't know how to do that"
+prompts/recipe.png,Searching for a recipe for cake on the internet,"I'm sorry, I didn't catch that"
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes",Searching the web for a recipe on Coke
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes","Ok, finding a good corn bread recipe"
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes",Would you like to search the web for a bread recipe
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes",playing horror movie: a new recipe for cake
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes",playing podcast: how to bake a cake
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes",opening article: around the world in 30 cakes
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes","I'm sorry, I cannot do that"
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes","I'm sorry, I don't know how to do that"
+prompts/recipe.png,"Okay, I'm looking on the internet for cake recipes","I'm sorry, I didn't catch that"
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake",Searching the web for a recipe on Coke
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake","Ok, finding a good corn bread recipe"
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake",Would you like to search the web for a bread recipe
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake",playing horror movie: a new recipe for cake
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake",playing podcast: how to bake a cake
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake",opening article: around the world in 30 cakes
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake","I'm sorry, I cannot do that"
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake","I'm sorry, I don't know how to do that"
+prompts/recipe.png,"Alright, I'm searching the web for a recipe for cake","I'm sorry, I didn't catch that"
+prompts/lights.png,Turning on the lights,Turning on the bedroom light
+prompts/lights.png,Turning on the lights,Turning off the backyard light
+prompts/lights.png,Turning on the lights,"Perfect, I will turn on the bathroom light"
+prompts/lights.png,Turning on the lights,opening article: the light switch effect by thomas edison
+prompts/lights.png,Turning on the lights,playing movie: burn on lights
+prompts/lights.png,Turning on the lights,playing song: all of the lights by kanye
+prompts/lights.png,Turning on the lights,"I'm sorry, I cannot do that"
+prompts/lights.png,Turning on the lights,"I'm sorry, I don't know how to do that"
+prompts/lights.png,Turning on the lights,"I'm sorry, I didn't catch that"
+prompts/lights.png,"Okay, I will turn off the lights",Turning on the bedroom light
+prompts/lights.png,"Okay, I will turn off the lights",Turning off the backyard light
+prompts/lights.png,"Okay, I will turn off the lights","Perfect, I will turn on the bathroom light"
+prompts/lights.png,"Okay, I will turn off the lights",opening article: the light switch effect by thomas edison
+prompts/lights.png,"Okay, I will turn off the lights",playing movie: burn on lights
+prompts/lights.png,"Okay, I will turn off the lights",playing song: all of the lights by kanye
+prompts/lights.png,"Okay, I will turn off the lights","I'm sorry, I cannot do that"
+prompts/lights.png,"Okay, I will turn off the lights","I'm sorry, I don't know how to do that"
+prompts/lights.png,"Okay, I will turn off the lights","I'm sorry, I didn't catch that"
+prompts/lights.png,"Alright, let me switch off the lights",Turning on the bedroom light
+prompts/lights.png,"Alright, let me switch off the lights",Turning off the backyard light
+prompts/lights.png,"Alright, let me switch off the lights","Perfect, I will turn on the bathroom light"
+prompts/lights.png,"Alright, let me switch off the lights",opening article: the light switch effect by thomas edison
+prompts/lights.png,"Alright, let me switch off the lights",playing movie: burn on lights
+prompts/lights.png,"Alright, let me switch off the lights",playing song: all of the lights by kanye
+prompts/lights.png,"Alright, let me switch off the lights","I'm sorry, I cannot do that"
+prompts/lights.png,"Alright, let me switch off the lights","I'm sorry, I don't know how to do that"
+prompts/lights.png,"Alright, let me switch off the lights","I'm sorry, I didn't catch that"
