@@ -37,20 +37,23 @@ class RavdessDataset(Dataset):
     if torch.is_tensor(idx):
       idx = idx.tolist()
     
-    output_data = {}
     sample = {
-        'mel': self.df.loc[idx, 'mel_pad'],
+        'M': self.df.loc[idx, 'mel_pad'],
         'mfcc': self.df.loc[idx, 'mfcc_pad'],
         'chromagram': self.df.loc[idx, 'chromagram_pad'],
+        'spec_contrast': self.df.loc[idx, 'spec_contrast_pad'],
+        'tonnetz': self.df.loc[idx, 'tonnetz_pad'],
         'emotion': self.df.loc[idx, 'emotion'],
-        'intensity': self.df.loc[idx, 'intensity'],
-        'statement': self.df.loc[idx, 'statement'],
-        'repeat': self.df.loc[idx, 'repeat'],
-        'gender': self.df.loc[idx, 'gender']
+        # 'intensity': self.df.loc[idx, 'intensity'],
+        # 'statement': self.df.loc[idx, 'statement'],
+        # 'repeat': self.df.loc[idx, 'repeat'],
+        # 'gender': self.df.loc[idx, 'gender']
     }
 
-    output_data = {}
-    values = sample["mel"].reshape(-1, 256, self.length)
+    # values = np.concatenate([sample[k].reshape(-1) for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+    values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+    # values = np.expand_dims(values, axis=1)
+    # values = values.transpose(1,0)
     values = torch.Tensor(values)
 
     target = torch.LongTensor([sample["emotion"]])
