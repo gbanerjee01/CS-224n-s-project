@@ -1,0 +1,15 @@
+{
+	"dataset_name": "RAVDESS",
+	"data": "/home/emily2h/2020-2021/winter/cs224n/preprocessed_data_split_nona_03_07.pkl",
+	"dataaug": false,
+	"scheduler": true,
+	"dataset": "emotion",
+	"model": "paper_conv",
+	"batch_size": 32,
+	"num_workers": 0,
+	"epochs": 70,
+	"lr": 1e-4,
+	"weight_decay": 1e-3,
+	"num_folds":1,
+	"checkpoint_dir": "/home/emily2h/2020-2021/winter/cs224n/baseline/checkpoints/paper_conv/"
+}
