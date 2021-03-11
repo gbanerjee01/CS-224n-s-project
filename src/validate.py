@@ -10,7 +10,7 @@ def evaluate(model, device, test_loader, loss_fn):
 	with torch.no_grad():
 		for batch_idx, data in enumerate(test_loader):
 			inputs = data[0].to(device)
-			target = data[1].squeeze(1).to(device)
+			target = data[1].squeeze(1).to(device) - 1
 
 			outputs = model(inputs)
 
@@ -18,7 +18,7 @@ def evaluate(model, device, test_loader, loss_fn):
 			total += target.size(0)
 			correct += (predicted == target).sum().item()
 
-			loss = loss_fn(outputs, target - 1)
+			loss = loss_fn(outputs, target)
 			loss_avg.update(loss.item())
 
 	return loss_avg(), (100*correct/total)
