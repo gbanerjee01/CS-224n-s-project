@@ -1,5 +1,5 @@
 {
-	"run_name": "resnet_5_feat_tonnetz",
+	"run_name": "resnet_feat_tonnetz",
 	"data": "data/preprocessed_data_split_nona_03_07.pkl",
 	"dataaug": false,
 	"pretrained": true,
@@ -12,5 +12,5 @@
     "weight_decay": 1e-3,
     "num_folds": 1,
     "features": ["tonnetz"],
-    "checkpoint_dir": "checkpoints/densenet_5_feat_tonnetz"
+    "checkpoint_dir": "checkpoints/resnet_feat_tonnetz"
 }
