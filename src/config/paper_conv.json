@@ -11,5 +11,6 @@
 	"lr": 1e-4,
 	"weight_decay": 1e-3,
 	"num_folds":1,
+	"features": ["None"],
 	"checkpoint_dir": "/home/emily2h/2020-2021/winter/cs224n/baseline/checkpoints/paper_conv/"
 }

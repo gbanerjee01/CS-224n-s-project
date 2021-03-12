@@ -11,5 +11,6 @@
 	"lr": 1e-4,
 	"weight_decay": 1e-3,
 	"num_folds":1,
+	"features": ["None"],
 	"checkpoint_dir": "/Users/allisonlettiere/Downloads/CS-224n-s-project/src/checkpoints/simple_conv_network/"
 }

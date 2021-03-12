@@ -12,11 +12,12 @@ from torch.utils.data import Dataset
 #edited this whole file
 
 class RavdessDataset(Dataset):
-  def __init__(self, df, input_len):
+  def __init__(self, df, input_len, features=None):
     self.df = df.reset_index(drop=True)
     self.length=input_len
 
     self.max_len = 0
+    self.features = features
     padded = []
     for idx in range(len(self.df)):
       m = self.df.loc[idx, 'mel']
@@ -51,7 +52,12 @@ class RavdessDataset(Dataset):
     }
 
     # values = np.concatenate([sample[k].reshape(-1) for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
-    values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+    
+    if self.features==None:
+      values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+    else:
+      values = np.concatenate([sample[k] for k in self.features])
+
     # values = np.expand_dims(values, axis=1)
     # values = values.transpose(1,0)
     values = torch.Tensor(values)
@@ -60,7 +66,7 @@ class RavdessDataset(Dataset):
 
     return (values, target)
 
-def fetch_dataloader(df, batch_size, num_workers):
-    dataset = RavdessDataset(df, 250)
+def fetch_dataloader(df, batch_size, num_workers, features=None):
+    dataset = RavdessDataset(df, 250, features)
     dataloader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=num_workers)
     return dataloader

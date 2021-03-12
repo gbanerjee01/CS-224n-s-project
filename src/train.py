@@ -87,13 +87,18 @@ if __name__ == "__main__":
     params = utils.Params(args.config_path)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+    if params.features==["None"]:
+        feats = None
+    else:
+        feats = params.features
+
     for i in range(1, params.num_folds+1):
         #made edits to the next 5 lines
         with open(params.data, 'rb') as fopen:
             train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
 
-        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_dataset, params.batch_size, params.num_workers)
-        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_dataset, params.batch_size, params.num_workers)
+        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_dataset, params.batch_size, params.num_workers, features=feats)
+        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_dataset, params.batch_size, params.num_workers, features=feats)
         
 
         writer = SummaryWriter(comment=params.run_name)

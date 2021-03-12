@@ -10,6 +10,7 @@
 	"epochs": 70,
 	"lr": 1e-4,
     "weight_decay": 1e-3,
-    "num_folds":1,
+    "num_folds": 1,
+    "features": ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz'],
     "checkpoint_dir": "checkpoints/densenet_5_feat_default"
 }
