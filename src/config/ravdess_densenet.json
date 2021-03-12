@@ -1,6 +1,6 @@
 {
 	"run_name": "densenet_5_feat_default",
-	"data": "data/preprocessed_data_average_across_time_03_09.pkl",
+	"data": "data/preprocessed_data_split_nona_03_07.pkl",
 	"dataaug": false,
 	"pretrained": true,
 	"scheduler": true,

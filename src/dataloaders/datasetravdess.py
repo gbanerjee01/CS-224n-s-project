@@ -20,18 +20,18 @@ class RavdessDataset(Dataset):
     self.features = features
 
     #COMMENT if using time avg preproc
-    # padded = []
-    # for idx in range(len(self.df)):
-    #   m = self.df.loc[idx, 'mel']
-    #   self.max_len = max(self.max_len, m.shape[1])
-    #   if m.shape[1] >= input_len:
-    #     m = m[:input_len]
-    #   else:
-    #     temp = np.zeros((m.shape[0], input_len))
-    #     temp[:,:m.shape[1]] = m
-    #     m = temp
-    #   padded.append(m)
-    # self.df['mel_pad'] = padded
+    padded = []
+    for idx in range(len(self.df)):
+      m = self.df.loc[idx, 'mel']
+      self.max_len = max(self.max_len, m.shape[1])
+      if m.shape[1] >= input_len:
+        m = m[:input_len]
+      else:
+        temp = np.zeros((m.shape[0], input_len))
+        temp[:,:m.shape[1]] = m
+        m = temp
+      padded.append(m)
+    self.df['mel_pad'] = padded
   
   def __len__(self):
     return len(self.df)
@@ -41,28 +41,28 @@ class RavdessDataset(Dataset):
       idx = idx.tolist()
     
     #use this for 0307 preproc
-    # sample = {
-    #     'M': self.df.loc[idx, 'mel_pad'],
-    #     'mfcc': self.df.loc[idx, 'mfcc_pad'],
-    #     'chromagram': self.df.loc[idx, 'chromagram_pad'],
-    #     'spec_contrast': self.df.loc[idx, 'spec_contrast_pad'],
-    #     'tonnetz': self.df.loc[idx, 'tonnetz_pad'],
-    #     'emotion': self.df.loc[idx, 'emotion'],
-    #     # 'intensity': self.df.loc[idx, 'intensity'],
-    #     # 'statement': self.df.loc[idx, 'statement'],
-    #     # 'repeat': self.df.loc[idx, 'repeat'],
-    #     # 'gender': self.df.loc[idx, 'gender']
-    # }
+    sample = {
+        'M': self.df.loc[idx, 'mel_pad'],
+        'mfcc': self.df.loc[idx, 'mfcc_pad'],
+        'chromagram': self.df.loc[idx, 'chromagram_pad'],
+        'spec_contrast': self.df.loc[idx, 'spec_contrast_pad'],
+        'tonnetz': self.df.loc[idx, 'tonnetz_pad'],
+        'emotion': self.df.loc[idx, 'emotion'],
+        # 'intensity': self.df.loc[idx, 'intensity'],
+        # 'statement': self.df.loc[idx, 'statement'],
+        # 'repeat': self.df.loc[idx, 'repeat'],
+        # 'gender': self.df.loc[idx, 'gender']
+    }
 
     #use this for time average preproc
-    sample = {
-      'M': self.df.loc[idx, 'mel'],
-      'mfcc': self.df.loc[idx, 'mfcc'],
-      'chromagram': self.df.loc[idx, 'chromagram'],
-      'spec_contrast': self.df.loc[idx, 'spec_contrast'],
-      'tonnetz': self.df.loc[idx, 'tonnetz'],
-      'emotion': self.df.loc[idx, 'emotion'],
-    }
+    # sample = {
+    #   'M': self.df.loc[idx, 'mel'],
+    #   'mfcc': self.df.loc[idx, 'mfcc'],
+    #   'chromagram': self.df.loc[idx, 'chromagram'],
+    #   'spec_contrast': self.df.loc[idx, 'spec_contrast'],
+    #   'tonnetz': self.df.loc[idx, 'tonnetz'],
+    #   'emotion': self.df.loc[idx, 'emotion'],
+    # }
 
     # values = np.concatenate([sample[k].reshape(-1) for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
     
