@@ -130,3 +130,5 @@ dmypy.json
 
 src/preprocessing/Audio_Speech_Actors_01-24
 runs/
+src/data/
+src/runs
