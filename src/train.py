@@ -93,7 +93,6 @@ if __name__ == "__main__":
         feats = params.features
 
     for i in range(1, params.num_folds+1):
-        #made edits to the next 5 lines
         with open(params.data, 'rb') as fopen:
             train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
 
