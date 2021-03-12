@@ -5,7 +5,7 @@
 	"pretrained": true,
 	"scheduler": true,
 	"model": "densenet",
-	"batch_size": 32,
+	"batch_size": 64,
 	"num_workers": 6,
 	"epochs": 70,
 	"lr": 1e-4,
