@@ -75,10 +75,10 @@ def train_and_evaluate(model, device, train_loader, val_loader, optimizer, loss_
                                "model": model.state_dict(),
                                "optimizer": optimizer.state_dict()}, is_best, split, "{}".format(params.checkpoint_dir))
 
-        writer.add_scalar("data{}/trainingLoss{}".format(params.dataset_name, split), train_loss, epoch)
-        writer.add_scalar("data{}/trainingAccuracy{}".format(params.dataset_name, split), train_accuracy, epoch)
-        writer.add_scalar("data{}/valLoss{}".format(params.dataset_name, split), val_loss, epoch)
-        writer.add_scalar("data{}/valAccuracy{}".format(params.dataset_name, split), val_accuracy, epoch)
+        writer.add_scalar("data{}/trainingLoss{}".format(params.run_name, split), train_loss, epoch)
+        writer.add_scalar("data{}/trainingAccuracy{}".format(params.run_name, split), train_accuracy, epoch)
+        writer.add_scalar("data{}/valLoss{}".format(params.run_name, split), val_loss, epoch)
+        writer.add_scalar("data{}/valAccuracy{}".format(params.run_name, split), val_accuracy, epoch)
     writer.close()
 
 
@@ -96,19 +96,19 @@ if __name__ == "__main__":
         val_loader = dataloaders.datasetravdess.fetch_dataloader(val_dataset, params.batch_size, params.num_workers)
         
 
-        writer = SummaryWriter(comment=params.dataset_name)
+        writer = SummaryWriter(comment=params.run_name)
         if params.model=="densenet":
-            model = models.densenet.DenseNet(params.dataset_name, params.pretrained).to(device)
+            model = models.densenet.DenseNet(params.run_name, params.pretrained).to(device)
         elif params.model=="resnet":
-            model = models.resnet.ResNet(params.dataset_name, params.pretrained).to(device)
+            model = models.resnet.ResNet(params.run_name, params.pretrained).to(device)
         elif params.model=="inception":
-            model = models.inception.Inception(params.dataset_name, params.pretrained).to(device) 
+            model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
-            model = models.linear_feedforward.LinearFeedForward(params.dataset_name).to(device)
+            model = models.linear_feedforward.LinearFeedForward(params.run_name).to(device)
         elif params.model=="paper_conv":
-            model = models.paper_conv.PaperConv(params.dataset_name).to(device)
+            model = models.paper_conv.PaperConv(params.run_name).to(device)
         elif params.model=="simple_conv_network":
-            model = models.simple_conv_network.ConvNetwork(params.dataset_name).to(device)
+            model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
         
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)

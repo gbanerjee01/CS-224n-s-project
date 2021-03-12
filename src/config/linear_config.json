@@ -1,5 +1,5 @@
 {
-	"dataset_name": "RAVDESS",
+	"run_name": "RAVDESS",
 	"data": "/Users/allisonlettiere/Documents/CS-224n-s-project/data/preprocessed_data_split_nona_02_28.pkl",
 	"dataaug": false,
 	"scheduler": true,

@@ -1,5 +1,5 @@
 {
-	"dataset_name": "RAVDESS",
+	"run_name": "RAVDESS",
 	"data": "/home/emily2h/2020-2021/winter/cs224n/preprocessed_data_split_nona_03_07.pkl",
 	"dataaug": false,
 	"scheduler": true,

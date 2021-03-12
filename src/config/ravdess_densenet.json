@@ -1,6 +1,6 @@
 {
-	"dataset_name": "densenet_original",
-	"data": "data/preprocessed_data_split_nona_02_28.pkl",
+	"run_name": "densenet_5_feat_default",
+	"data": "data/preprocessed_data_split_nona_03_07.pkl",
 	"dataaug": false,
 	"pretrained": true,
 	"scheduler": true,
@@ -11,5 +11,5 @@
 	"lr": 1e-4,
     "weight_decay": 1e-3,
     "num_folds":1,
-    "checkpoint_dir": "checkpoints/densenet_original"
+    "checkpoint_dir": "checkpoints/densenet_5_feat_default"
 }
