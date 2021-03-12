@@ -87,7 +87,7 @@ if __name__ == "__main__":
     params = utils.Params(args.config_path)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-    if params.features==["None"]:
+    if params.features[0]=="None":
         feats = None
     else:
         feats = params.features
