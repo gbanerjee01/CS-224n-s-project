@@ -18,18 +18,20 @@ class RavdessDataset(Dataset):
 
     self.max_len = 0
     self.features = features
-    padded = []
-    for idx in range(len(self.df)):
-      m = self.df.loc[idx, 'mel']
-      self.max_len = max(self.max_len, m.shape[1])
-      if m.shape[1] >= input_len:
-        m = m[:input_len]
-      else:
-        temp = np.zeros((m.shape[0], input_len))
-        temp[:,:m.shape[1]] = m
-        m = temp
-      padded.append(m)
-    self.df['mel_pad'] = padded
+
+    #COMMENT if using time avg preproc
+    # padded = []
+    # for idx in range(len(self.df)):
+    #   m = self.df.loc[idx, 'mel']
+    #   self.max_len = max(self.max_len, m.shape[1])
+    #   if m.shape[1] >= input_len:
+    #     m = m[:input_len]
+    #   else:
+    #     temp = np.zeros((m.shape[0], input_len))
+    #     temp[:,:m.shape[1]] = m
+    #     m = temp
+    #   padded.append(m)
+    # self.df['mel_pad'] = padded
   
   def __len__(self):
     return len(self.df)
