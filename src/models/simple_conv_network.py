@@ -1,3 +1,5 @@
+Gaurab Banerjee
+Fri 3/12/2021 11:35 PM
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -36,8 +38,7 @@ class ConvNetwork(nn.Module):
         )
 
     def forward(self, x):
-        x = torch.transpose(x, 0, 1)
-        x = torch.unsqueeze(x, 0)
+        x = torch.unsqueeze(x, 1)
         x = self.conv1(x)
         x = self.conv2(x)
         x = self.conv3(x)
