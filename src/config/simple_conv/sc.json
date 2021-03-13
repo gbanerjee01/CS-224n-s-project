@@ -5,7 +5,7 @@
 	"scheduler": true,
 	"dataset": "emotion",
 	"model": "simple_conv_network",
-	"batch_size": 64,
+	"batch_size": 16,
 	"num_workers": 2,
 	"epochs": 80,
 	"lr": 1e-4,
