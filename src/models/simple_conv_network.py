@@ -1,5 +1,3 @@
-Gaurab Banerjee
-Fri 3/12/2021 11:35 PM
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
