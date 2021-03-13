@@ -117,7 +117,7 @@ if __name__ == "__main__":
             model = models.paper_conv.PaperConv(params.run_name).to(device)
         elif params.model=="simple_conv_network":
             # model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
-            model = models.simple_conv_network.ConvNetwork(params.dataset_name, device).to(device)
+            model = models.simple_conv_network.ConvNetwork(params.run_name, device).to(device)
         
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
