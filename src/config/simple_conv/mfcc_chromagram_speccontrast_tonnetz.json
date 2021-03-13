@@ -1,0 +1,16 @@
+{
+	"run_name": "convnet_feat_mfcc_chromagram_speccontrast_tonnetz",
+	"data": "data/preprocessed_data_split_nona_03_07.pkl",
+	"dataaug": false,
+	"scheduler": true,
+	"dataset": "emotion",
+	"model": "simple_conv_network",
+	"batch_size": 32,
+	"num_workers": 2,
+	"epochs": 80,
+	"lr": 1e-4,
+	"weight_decay": 1e-3,
+	"num_folds":1,
+	"features": ["mfcc", "chromagram", "spec_contrast", "tonnetz"],
+	"checkpoint_dir": "checkpoints/simple_conv_mfcc_chromagram_speccontrast_tonnetz"
+}
