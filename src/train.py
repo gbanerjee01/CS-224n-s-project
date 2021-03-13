@@ -92,6 +92,9 @@ if __name__ == "__main__":
     else:
         feats = params.features
 
+    if not os.path.isdir(params.checkpoint_dir):
+        os.mkdir(params.checkpoint_dir)
+
     for i in range(1, params.num_folds+1):
         with open(params.data, 'rb') as fopen:
             train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
@@ -112,7 +115,8 @@ if __name__ == "__main__":
         elif params.model=="paper_conv":
             model = models.paper_conv.PaperConv(params.run_name).to(device)
         elif params.model=="simple_conv_network":
-            model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
+            # model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
+            model = models.simple_conv_network.ConvNetwork(params.dataset_name, device).to(device)
         
         loss_fn = nn.CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
