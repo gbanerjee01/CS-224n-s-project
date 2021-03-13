@@ -4,7 +4,7 @@
 	"dataaug": false,
 	"pretrained": true,
 	"scheduler": true,
-	"model": "densenet",
+	"model": "resnet",
 	"batch_size": 32,
 	"num_workers": 6,
 	"epochs": 40,
