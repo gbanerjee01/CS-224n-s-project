@@ -14,10 +14,21 @@ class MultiNet(nn.Module):
 		self.densenet.classifier = nn.Linear(1920, 1024)
 
 		self.fc1 = nn.Sequential(
+			nn.Dropout(p=0.5, inplace=True),
+			nn.Linear(2048, 512),
+			nn.ReLU(),
+			nn.Linear(512, num_classes)
+		)
+
+		self.fc2 = nn.Sequential(
 			nn.Dropout(p=0.9, inplace=True),
 			nn.Linear(2048, 512),
 			nn.ReLU(),
 			nn.Linear(512, num_classes)
+		)
+
+		self.fc3 = = nn.Sequential(
+			nn.Linear(2048, num_classes)
 		)
 		
 	def forward(self, x):
@@ -38,6 +49,6 @@ class MultiNet(nn.Module):
 		routput = self.densenet(squeezed_rinput)
 
 		output = torch.cat((doutput, routput), dim=1)
-		output = self.fc1(output)
+		output = self.fc3(output)
 
 		return output
