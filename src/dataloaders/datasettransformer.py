@@ -32,8 +32,9 @@ class TransformerDataset(Dataset):
     # stack the same data three times to emulate RGB image
     img = torch.stack([img]*3, dim=1).squeeze(dim=0).type(torch.float)
 
-    label = self.labels.iloc[idx]        
-    label = torch.tensor(label-1).type(torch.long)
+    label = self.labels.iloc[idx]    
+    # unsqueeze to fit with the train script    
+    label = torch.tensor(label).type(torch.long).unsqueeze(0)
     
     return img, label
 
