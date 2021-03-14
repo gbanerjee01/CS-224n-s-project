@@ -12,7 +12,7 @@ from torch.utils.data import Dataset
 #edited this whole file
 
 class RavdessDataset(Dataset):
-  def __init__(self, df, input_len, features=None):
+  def __init__(self, df, input_len, features=None, is_multinet=False):
     self.df = df.reset_index(drop=True)
     self.length=input_len
 
@@ -65,15 +65,23 @@ class RavdessDataset(Dataset):
     # }
 
     # values = np.concatenate([sample[k].reshape(-1) for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
-    
+    multinet_dict = dict()
+
     if self.features==None:
       values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+      values = torch.Tensor(values)
+    elif is_multinet:
+      for k in self.features:
+        multinet_dict[k] = torch.Tensor(sample[k])
+        values = multinet_dict
     else:
       values = np.concatenate([sample[k] for k in self.features])
+      values = torch.Tensor(values)
 
     # values = np.expand_dims(values, axis=1)
     # values = values.transpose(1,0)
-    values = torch.Tensor(values)
+
+    # values = torch.Tensor(values)
 
     target = torch.LongTensor([sample["emotion"]])
 
