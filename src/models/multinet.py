@@ -14,7 +14,7 @@ class MultiNet(nn.Module):
 		self.densenet.classifier = nn.Linear(1920, 1024)
 
 		self.fc1 = nn.Sequential(
-			nn.Dropout(p=0.5, inplace=True),
+			nn.Dropout(p=0.9, inplace=True),
 			nn.Linear(2048, 512),
 			nn.ReLU(),
 			nn.Linear(512, num_classes)
