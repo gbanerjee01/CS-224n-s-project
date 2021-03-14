@@ -23,12 +23,14 @@ class MultiNet(nn.Module):
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
 		
+		device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 		dinput = x['dnet']
 		rinput = x['rnet']
 
 		dinput = dinput.to(device)
 		rinput = rinput.to(device)
-		
+
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
 		doutput = self.model(squeezed_dinput)
 
