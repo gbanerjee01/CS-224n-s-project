@@ -13,6 +13,14 @@ class MultiNet(nn.Module):
 		self.densenet = models.densenet201(pretrained=pretrained)
 		self.densenet.classifier = nn.Linear(1920, 1024)
 
+
+		self.resnet2 = models.resnet50(pretrained=pretrained)
+		self.resnet2.fc = nn.Linear(2048, 32)
+
+		self.densenet2 = models.densenet201(pretrained=pretrained)
+		self.densenet2.classifier = nn.Linear(1920, 32)
+
+
 		self.fc1 = nn.Sequential(
 			nn.Dropout(p=0.5, inplace=True),
 			nn.Linear(2048, 512),
@@ -30,6 +38,10 @@ class MultiNet(nn.Module):
 		self.fc3 = nn.Sequential(
 			nn.Linear(2048, num_classes)
 		)
+
+		self.fc4 = nn.Sequential(
+			nn.Linear(64, num_classes)
+		)
 		
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
@@ -43,12 +55,12 @@ class MultiNet(nn.Module):
 		rinput = rinput.to(device)
 
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
-		doutput = self.resnet(squeezed_dinput)
+		doutput = self.resnet2(squeezed_dinput)
 
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
-		routput = self.densenet(squeezed_rinput)
+		routput = self.densenet2(squeezed_rinput)
 
 		output = torch.cat((doutput, routput), dim=1)
-		output = self.fc3(output)
+		output = self.fc4(output)
 
 		return output
