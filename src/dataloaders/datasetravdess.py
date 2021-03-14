@@ -19,6 +19,8 @@ class RavdessDataset(Dataset):
     self.max_len = 0
     self.features = features
 
+    self.is_multinet = is_multinet
+
     #COMMENT if using time avg preproc
     padded = []
     for idx in range(len(self.df)):
@@ -70,11 +72,11 @@ class RavdessDataset(Dataset):
     if self.features==None:
       values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
       values = torch.Tensor(values)
-    elif is_multinet:
+    elif self.is_multinet:
         #densenet -> mfcc, m, tonnetz
       dnet = np.concatenate([sample[k] for k in ['M', 'mfcc', 'tonnetz']])
       dnet = torch.Tensor(dnet)
-      
+
         #resnet -> all features
       rnet = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
       rnet = torch.Tensor(rnet)
@@ -95,7 +97,7 @@ class RavdessDataset(Dataset):
 
     return (values, target)
 
-def fetch_dataloader(df, batch_size, num_workers, features=None):
-    dataset = RavdessDataset(df, 250, features)
+def fetch_dataloader(df, batch_size, num_workers, features=None, is_multinet=False):
+    dataset = RavdessDataset(df, 250, features, is_multinet)
     dataloader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=num_workers)
     return dataloader
