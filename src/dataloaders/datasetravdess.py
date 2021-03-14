@@ -71,9 +71,17 @@ class RavdessDataset(Dataset):
       values = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
       values = torch.Tensor(values)
     elif is_multinet:
-      for k in self.features:
-        multinet_dict[k] = torch.Tensor(sample[k])
-        values = multinet_dict
+        #densenet -> mfcc, m, tonnetz
+      dnet = np.concatenate([sample[k] for k in ['M', 'mfcc', 'tonnetz']])
+      dnet = torch.Tensor(dnet)
+      
+        #resnet -> all features
+      rnet = np.concatenate([sample[k] for k in ['M', 'mfcc', 'chromagram', 'spec_contrast', 'tonnetz']])
+      rnet = torch.Tensor(rnet)
+
+      multinet_dict['dnet'] = dnet
+      multinet_dict['rnet'] = rnet
+      values = multinet_dict
     else:
       values = np.concatenate([sample[k] for k in self.features])
       values = torch.Tensor(values)
