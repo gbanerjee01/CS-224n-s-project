@@ -37,7 +37,12 @@ def train(model, device, data_loader, optimizer, loss_fn):
     with tqdm(total=len(data_loader)) as t:
         for batch_idx, data in enumerate(data_loader):
             print(batch_idx)
-            inputs = data[0].to(device)
+
+            if torch.is_tensor(data[0]):
+                inputs = data[0].to(device)
+            else:
+                inputs = data[0] #to handle for multinet dict
+
             target = data[1].squeeze(1).to(device) - 1
 
             outputs = model(inputs)

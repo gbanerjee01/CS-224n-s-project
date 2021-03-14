@@ -26,6 +26,9 @@ class MultiNet(nn.Module):
 		dinput = x['dnet']
 		rinput = x['rnet']
 
+		dinput = dinput.to(device)
+		rinput = rinput.to(device)
+		
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
 		doutput = self.model(squeezed_dinput)
 
