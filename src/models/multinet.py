@@ -51,6 +51,11 @@ class MultiNet(nn.Module):
 		self.fc4 = nn.Sequential(
 			nn.Linear(64, num_classes)
 		)
+
+		self.fc5 = nn.Sequential(
+			nn.Dropout(p=0.5),
+			nn.Linear(64, num_classes)
+		)
 		
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
@@ -72,6 +77,6 @@ class MultiNet(nn.Module):
 		# print(doutput.shape)
 		# print(routput.shape)
 		output = torch.cat((doutput, routput), dim=1)
-		output = self.fc4(output)
+		output = self.fc5(output)
 
 		return output
