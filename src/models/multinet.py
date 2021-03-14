@@ -8,10 +8,17 @@ class MultiNet(nn.Module):
 		num_classes = 8
 
 		self.resnet = models.resnet50(pretrained=pretrained)
-		self.resnet.fc = nn.Linear(2048, num_classes)
+		self.resnet.fc = nn.Linear(2048, 1024)
 
 		self.densenet = models.densenet201(pretrained=pretrained)
-        self.densenet.classifier = nn.Linear(1920, num_classes)
+        self.densenet.classifier = nn.Linear(1920, 1024)
+
+        self.fc1 = nn.Sequential(
+        	nn.dropout(p=0.5, inplace=True),
+        	nn.Linear(2048, 512),
+        	nn.ReLU(),
+        	nn.Linear(512, num_classes)
+        )
 		
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
@@ -25,6 +32,8 @@ class MultiNet(nn.Module):
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
 		routput = self.model(squeezed_rinput)
 
-		
+		output = torch.cat(doutput, routput)
+
+		output = self.fc1(output)
 
 		return output
