@@ -143,7 +143,7 @@ if __name__ == "__main__":
             train_loader = dataloaders.datasettransformer.fetch_dataloader(train_df, params.batch_size, params.num_workers, features=feats)
             val_loader = dataloaders.datasettransformer.fetch_dataloader(val_df, params.batch_size, params.num_workers, features=feats)
             
-            model = models.transformer.Transformer().to(device)
+            model = models.transformer.Transformer(blocks=params.blocks).to(device)
 
             
         loss_fn = nn.CrossEntropyLoss()

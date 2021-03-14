@@ -1,5 +1,5 @@
 {
-    "run_name": "transformer_feat_mel",
+    "run_name": "transformer_feat_mel_freeze_all",
     "data": "data/preprocessed_data_split_nona_03_07.pkl",
     "dataaug": false,
 	"pretrained": true,
@@ -12,7 +12,7 @@
     "weight_decay": 1e-3,
     "num_folds": 1,
     "features": ["mel"],
-    "checkpoint_dir": "checkpoints/transformer_feat_mel",
+    "checkpoint_dir": "checkpoints/transformer_feat_mel_freeze_all",
     "feature_extracting": true,
-    "blocks": [11]
+    "blocks": []
 }
