@@ -140,8 +140,8 @@ if __name__ == "__main__":
             # model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
             model = models.simple_conv_network.ConvNetwork(params.run_name, device).to(device)
         elif params.model=="transformer":
-            train_loader = dataloaders.datasettransformer.fetch_dataloader(train_df, params.batch_size, params.num_workers)
-            val_loader = dataloaders.datasettransformer.fetch_dataloader(val_df, params.batch_size, params.num_workers)
+            train_loader = dataloaders.datasettransformer.fetch_dataloader(train_df, params.batch_size, params.num_workers, features=feats)
+            val_loader = dataloaders.datasettransformer.fetch_dataloader(val_df, params.batch_size, params.num_workers, features=feats)
             
             model = models.transformer.Transformer().to(device)
 
