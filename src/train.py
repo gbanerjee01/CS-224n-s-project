@@ -11,10 +11,13 @@ import models.resnet
 import models.inception
 import models.linear_feedforward
 import models.simple_conv_network
+import models.transformer
 import time
 import dataloaders.datasetravdess
+import dataloaders.datasettransformer
 import pickle
 import os
+import transformers
 
 from tqdm import tqdm
 from tensorboardX import SummaryWriter
@@ -32,6 +35,7 @@ def train(model, device, data_loader, optimizer, loss_fn):
 
     with tqdm(total=len(data_loader)) as t:
         for batch_idx, data in enumerate(data_loader):
+            print(batch_idx)
             inputs = data[0].to(device)
             target = data[1].squeeze(1).to(device) - 1
 
@@ -98,10 +102,10 @@ if __name__ == "__main__":
 
     for i in range(1, params.num_folds+1):
         with open(params.data, 'rb') as fopen:
-            train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
+            train_df, val_df, test_df = pickle.load(fopen, encoding='latin1')
 
-        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_dataset, params.batch_size, params.num_workers, features=feats)
-        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_dataset, params.batch_size, params.num_workers, features=feats)
+        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_df, params.batch_size, params.num_workers, features=feats)
+        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_df, params.batch_size, params.num_workers, features=feats)
         
 
         writer = SummaryWriter(comment=params.run_name)
@@ -118,9 +122,18 @@ if __name__ == "__main__":
         elif params.model=="simple_conv_network":
             # model = models.simple_conv_network.ConvNetwork(params.run_name).to(device)
             model = models.simple_conv_network.ConvNetwork(params.run_name, device).to(device)
-        
+        elif params.model=="transformer":
+            train_loader = dataloaders.datasettransformer.fetch_dataloader(train_df, params.batch_size, params.num_workers)
+            val_loader = dataloaders.datasettransformer.fetch_dataloader(val_df, params.batch_size, params.num_workers)
+            
+            model = models.transformer.Transformer().to(device)
+
+            
         loss_fn = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
+        if params.model=="transformer":
+            optimizer = transformers.AdamW(model.params_to_learn, lr=params.lr, weight_decay=params.weight_decay)
+        else:
+            optimizer = torch.optim.Adam(model.parameters(), lr=params.lr, weight_decay=params.weight_decay)
 
         if params.scheduler:
             scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 30, gamma=0.1)
