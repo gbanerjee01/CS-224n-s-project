@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
+import sys
 
 class MultiNet(nn.Module):
 	def __init__(self, dataset, pretrained=True):
@@ -37,7 +38,10 @@ class MultiNet(nn.Module):
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
 		routput = self.densenet(squeezed_rinput)
 
-		output = torch.cat((doutput, routput))
+		print(doutput.shape)
+		print(routput.shape)
+		sys.exit()
+		output = torch.cat((doutput, routput), dim=1)
 
 		output = self.fc1(output)
 
