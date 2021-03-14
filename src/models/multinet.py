@@ -77,6 +77,6 @@ class MultiNet(nn.Module):
 		# print(doutput.shape)
 		# print(routput.shape)
 		output = torch.cat((doutput, routput), dim=1)
-		output = self.fc5(output)
+		output = self.fc4(output)
 
 		return output
