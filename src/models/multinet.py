@@ -20,6 +20,8 @@ class MultiNet(nn.Module):
 		self.densenet2 = models.densenet201(pretrained=pretrained)
 		self.densenet2.classifier = nn.Linear(1920, 32)
 
+		self.resnet3 = models.quantization.resnet50(pretrained=True, quantize=True)
+		self.resnet3.fc = nn.Linear(2048, 32)
 
 		self.fc1 = nn.Sequential(
 			nn.Dropout(p=0.5, inplace=True),
@@ -55,7 +57,7 @@ class MultiNet(nn.Module):
 		rinput = rinput.to(device)
 
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
-		doutput = self.resnet2(squeezed_dinput)
+		doutput = self.resnet3(squeezed_dinput)
 
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
 		routput = self.densenet2(squeezed_rinput)
