@@ -9,7 +9,11 @@ def evaluate(model, device, test_loader, loss_fn):
 	model.eval()
 	with torch.no_grad():
 		for batch_idx, data in enumerate(test_loader):
-			inputs = data[0].to(device)
+			if torch.is_tensor(data[0]):
+				inputs = data[0].to(device)
+			else:
+				inputs = data[0] #to handle for multinet dict
+
 			target = data[1].squeeze(1).to(device) - 1
 
 			outputs = model(inputs)

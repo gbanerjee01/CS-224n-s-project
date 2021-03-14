@@ -36,7 +36,7 @@ def train(model, device, data_loader, optimizer, loss_fn):
 
     with tqdm(total=len(data_loader)) as t:
         for batch_idx, data in enumerate(data_loader):
-            print(batch_idx)
+            # print(batch_idx)
 
             if torch.is_tensor(data[0]):
                 inputs = data[0].to(device)

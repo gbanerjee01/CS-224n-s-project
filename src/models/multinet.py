@@ -37,8 +37,7 @@ class MultiNet(nn.Module):
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
 		routput = self.densenet(squeezed_rinput)
 
-		output = torch.cat((doutput, routput))
-
+		output = torch.cat((doutput, routput), dim=1)
 		output = self.fc1(output)
 
 		return output
