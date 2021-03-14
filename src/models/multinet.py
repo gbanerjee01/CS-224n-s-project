@@ -71,12 +71,16 @@ class MultiNet(nn.Module):
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
 		doutput = self.densenet2(squeezed_dinput)
 
-		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
-		routput = self.resnet2(squeezed_rinput)
+		# squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
+		# routput = self.resnet2(squeezed_rinput)
+
+		doutput2 = self.densenet3(squeezed_dinput)
 
 		# print(doutput.shape)
 		# print(routput.shape)
-		output = torch.cat((doutput, routput), dim=1)
+		# output = torch.cat((doutput, routput), dim=1)
+
+		output = torch.cat((doutput, doutput2), dim=1)
 		output = self.fc4(output)
 
 		return output
