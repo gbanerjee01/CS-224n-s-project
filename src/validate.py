@@ -10,9 +10,9 @@ def evaluate(model, device, test_loader, loss_fn):
 	with torch.no_grad():
 		for batch_idx, data in enumerate(test_loader):
 			if torch.is_tensor(data[0]):
-                inputs = data[0].to(device)
-            else:
-                inputs = data[0] #to handle for multinet dict
+				inputs = data[0].to(device)
+			else:
+				inputs = data[0] #to handle for multinet dict
 
 			target = data[1].squeeze(1).to(device) - 1
 
