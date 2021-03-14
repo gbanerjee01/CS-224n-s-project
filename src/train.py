@@ -12,6 +12,7 @@ import models.inception
 import models.linear_feedforward
 import models.simple_conv_network
 import models.transformer
+import models.multinet
 import time
 import dataloaders.datasetravdess
 import dataloaders.datasettransformer
@@ -97,6 +98,15 @@ if __name__ == "__main__":
     else:
         feats = params.features
 
+    is_mnet = False
+    try params.ismultinet:
+        if params.ismultinet=="True":
+            is_mnet = True
+        else:
+            is_mnet = False
+    except:
+        pass
+
     if not os.path.isdir(params.checkpoint_dir):
         os.mkdir(params.checkpoint_dir)
 
@@ -104,8 +114,8 @@ if __name__ == "__main__":
         with open(params.data, 'rb') as fopen:
             train_df, val_df, test_df = pickle.load(fopen, encoding='latin1')
 
-        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_df, params.batch_size, params.num_workers, features=feats)
-        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_df, params.batch_size, params.num_workers, features=feats)
+        train_loader = dataloaders.datasetravdess.fetch_dataloader(train_df, params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
+        val_loader = dataloaders.datasetravdess.fetch_dataloader(val_df, params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
         
 
         writer = SummaryWriter(comment=params.run_name)
@@ -113,6 +123,8 @@ if __name__ == "__main__":
             model = models.densenet.DenseNet(params.run_name, params.pretrained).to(device)
         elif params.model=="resnet":
             model = models.resnet.ResNet(params.run_name, params.pretrained).to(device)
+        elif params.model=="multinet":
+            model = models.multinet.MultiNet(params.run_name, params.pretrained).to(device)
         elif params.model=="inception":
             model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":

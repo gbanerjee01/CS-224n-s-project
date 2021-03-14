@@ -11,6 +11,7 @@
 	"lr": 1e-4,
     "weight_decay": 1e-3,
     "num_folds": 1,
+    "ismultinet": "True",
     "features": ["M", "mfcc", "chromagram", "spec_contrast", "tonnetz"],
     "checkpoint_dir": "checkpoints/multinet_run1"
 }
