@@ -37,7 +37,7 @@ class TransformerDataset(Dataset):
     
     return img, label
 
-def fetch_dataloader(df, batch_size, num_workers):
-    dataset = TransformerDataset(df)
+def fetch_dataloader(df, batch_size, num_workers, features):
+    dataset = TransformerDataset(df, features)
     dataloader = DataLoader(dataset, shuffle=True, batch_size=batch_size, num_workers=num_workers)
     return dataloader
