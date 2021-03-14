@@ -69,10 +69,10 @@ class MultiNet(nn.Module):
 		rinput = rinput.to(device)
 
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
-		doutput = self.densenet3(squeezed_dinput)
+		doutput = self.densenet2(squeezed_dinput)
 
 		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
-		routput = self.resnet3(squeezed_rinput)
+		routput = self.resnet2(squeezed_rinput)
 
 		# print(doutput.shape)
 		# print(routput.shape)
