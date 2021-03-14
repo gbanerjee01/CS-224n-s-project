@@ -27,7 +27,7 @@ class MultiNet(nn.Module):
 			nn.Linear(512, num_classes)
 		)
 
-		self.fc3 = = nn.Sequential(
+		self.fc3 = nn.Sequential(
 			nn.Linear(2048, num_classes)
 		)
 		
