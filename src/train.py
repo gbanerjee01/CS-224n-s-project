@@ -99,7 +99,7 @@ if __name__ == "__main__":
         feats = params.features
 
     is_mnet = False
-    try params.ismultinet:
+    try:
         if params.ismultinet=="True":
             is_mnet = True
         else:
