@@ -1,5 +1,5 @@
 {
-	"run_name": "densenet_feat_M_mfcc_tonnetz",
+	"run_name": "densenet_feat_M_mfcc_tonnetz2",
 	"data": "data/preprocessed_data_split_nona_03_07.pkl",
 	"dataaug": false,
 	"pretrained": true,
@@ -7,10 +7,10 @@
 	"model": "densenet",
 	"batch_size": 32,
 	"num_workers": 6,
-	"epochs": 40,
+	"epochs": 100,
 	"lr": 1e-4,
     "weight_decay": 1e-3,
     "num_folds": 1,
     "features": ["M", "mfcc", "tonnetz"],
-    "checkpoint_dir": "checkpoints/densenet_feat_M_mfcc_tonnetz"
+    "checkpoint_dir": "checkpoints/densenet_feat_M_mfcc_tonnetz2"
 }
