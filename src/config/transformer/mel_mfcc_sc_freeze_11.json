@@ -1,5 +1,5 @@
 {
-    "run_name": "transformer_feat_mfcc",
+    "run_name": "transformer_feat_mel_mfcc_spectral_contrast_freeze_11",
     "data": "data/preprocessed_data_split_nona_03_07.pkl",
     "dataaug": false,
 	"pretrained": true,
@@ -11,8 +11,8 @@
 	"lr": 5e-5,
     "weight_decay": 1e-3,
     "num_folds": 1,
-    "features": ["mfcc"],
-    "checkpoint_dir": "checkpoints/transformer_feat_mfcc",
+    "features": ["mel", "mfcc", "spectral_contrast"],
+    "checkpoint_dir": "checkpoints/transformer_feat_mel_mfcc_spectral_contrast_freeze_11",
     "feature_extracting": true,
     "blocks": [11]
 }
