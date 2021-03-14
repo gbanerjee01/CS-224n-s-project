@@ -7,7 +7,7 @@
 	"model": "densenet",
 	"batch_size": 32,
 	"num_workers": 6,
-	"epochs": 40,
+	"epochs": 100,
 	"lr": 1e-4,
     "weight_decay": 1e-3,
     "num_folds": 1,
