@@ -1,0 +1,18 @@
+{
+    "run_name": "transformer_feat_mel_mfcc_tonnetz_freeze_11_epoch_400",
+    "data": "data/preprocessed_data_split_nona_03_07.pkl",
+    "dataaug": false,
+	"pretrained": true,
+	"scheduler": true,
+	"model": "transformer",
+	"batch_size": 32,
+	"num_workers": 6,
+	"epochs": 400,
+	"lr": 5e-5,
+    "weight_decay": 1e-3,
+    "num_folds": 1,
+    "features": ["mel", "mfcc", "tonnetz"],
+    "checkpoint_dir": "checkpoints/transformer_feat_mel_mfcc_tonnetz_freeze_11_epoch_400",
+    "feature_extracting": true,
+    "blocks": [11]
+}
