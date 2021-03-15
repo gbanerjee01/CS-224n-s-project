@@ -1,0 +1,17 @@
+{
+	"run_name": "densenet_stitched_feat_best",
+	"data": "/Users/allisonlettiere/Downloads/preprocessed_data_split_nona_03_07.pkl",
+	"dataaug": false,
+	"pretrained": true,
+	"scheduler": true,
+	"model": "densenet_stitched",
+	"batch_size": 32,
+	"num_workers": 0,
+	"epochs": 40,
+	"lr": 1e-4,
+    "weight_decay": 1e-3,
+    "num_folds": 1,
+    "features": ["M", "mfcc", "tonnetz"],
+    "checkpoint_dir": "/Users/allisonlettiere/Downloads/CS-224n-s-project/src/checkpoints/densenet_feat_m_mfcc_tonnetz_finetune",
+    "model_path":"/Users/allisonlettiere/Downloads/CS-224n-s-project/src/checkpoints/densenet_feat_M_mfcc_tonnetz/model_best_1.pth.tar"
+}
