@@ -1,0 +1,18 @@
+{
+	"run_name": "multinet_run9",
+	"data": "data/preprocessed_data_split_nona_03_07.pkl",
+	"dataaug": false,
+	"pretrained": true,
+	"scheduler": true,
+	"model": "multinet",
+	"batch_size": 32,
+	"num_workers": 6,
+	"epochs": 70,
+	"lr": 1e-4,
+    "weight_decay": 1e-3,
+    "num_folds": 1,
+    "ismultinet": "True",
+    "features": ["M", "mfcc", "chromagram", "spec_contrast", "tonnetz"],
+    "checkpoint_dir": "checkpoints/multinet_run9",
+    "model_path":"checkpoints/multinet_run9/model_best_1.pth.tar"
+}
