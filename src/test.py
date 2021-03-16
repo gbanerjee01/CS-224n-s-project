@@ -8,6 +8,7 @@ import validate
 import argparse
 import models.densenet
 import models.resnet
+import models.multinet
 import models.inception
 import models.linear_feedforward
 import models.simple_conv_network
