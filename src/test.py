@@ -72,7 +72,7 @@ if __name__ == "__main__":
             test_loader = dataloaders.datasettransformer.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats)
             test_loader_w = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats)
             test_loader_m = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
-            model = models.transformer.Transformer(blocks=params.blocks)
+            model = models.transformer.Transformer(blocks=params.blocks).to(device)
 
 
         loss_fn = nn.CrossEntropyLoss()
