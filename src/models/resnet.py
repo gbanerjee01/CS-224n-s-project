@@ -3,7 +3,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 class ResNet(nn.Module):
-	def __init__(self, dataset, pretrained=True, checkpoint_path):
+	def __init__(self, dataset, checkpoint_path, pretrained=True):
 		super(ResNet, self).__init__()
 		num_classes = 8
 		self.model = models.resnet50(pretrained=pretrained)

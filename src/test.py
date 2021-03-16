@@ -46,9 +46,9 @@ if __name__ == "__main__":
         test_loader_m = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
         
         if params.model=="densenet":
-            model = models.densenet.DenseNet(params.run_name, params.pretrained).to(device)
+            model = models.densenet.DenseNet(params.run_name, params.model_path, params.pretrained).to(device)
         elif params.model=="resnet":
-            model = models.resnet.ResNet(params.run_name, params.pretrained).to(device)
+            model = models.resnet.ResNet(params.run_name, params.model_path, params.pretrained).to(device)
         elif params.model=="inception":
             model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":

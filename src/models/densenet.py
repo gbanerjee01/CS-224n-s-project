@@ -3,7 +3,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 class DenseNet(nn.Module):
-    def __init__(self, dataset, pretrained=True, checkpoint_path):
+    def __init__(self, dataset, checkpoint_path, pretrained=True):
         super(DenseNet, self).__init__()
         num_classes = 8  #8 emotions in RAVDESS -> edited here
         self.model = models.densenet201(pretrained=pretrained)
