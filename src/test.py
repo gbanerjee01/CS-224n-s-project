@@ -49,6 +49,9 @@ if __name__ == "__main__":
             model = models.densenet.DenseNet(params.run_name, params.model_path, params.pretrained).to(device)
         elif params.model=="resnet":
             model = models.resnet.ResNet(params.run_name, params.model_path, params.pretrained).to(device)
+        elif params.model=="multinet":
+            model = models.multinet.MultiNet(params.run_name, params.pretrained).to(device)
+            model = utils.load_checkpoint(params.model_path, model)
         elif params.model=="inception":
             model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
@@ -62,6 +65,7 @@ if __name__ == "__main__":
             model = models.resnet_stitched.StitchedResNet(params.run_name, params.model_path).to(device)
         elif params.model=="densenet_stitched":
             model = models.densenet_stitched.StitchedDenseNet(params.run_name, params.model_path).to(device)
+
 
         loss_fn = nn.CrossEntropyLoss()
 
