@@ -52,7 +52,7 @@ if __name__ == "__main__":
             model = models.resnet.ResNet(params.run_name, params.model_path, params.pretrained).to(device)
         elif params.model=="multinet":
             model = models.multinet.MultiNet(params.run_name, params.pretrained).to(device)
-            model = utils.load_checkpoint(params.model_path, model)
+            utils.load_checkpoint(params.model_path, model)
         elif params.model=="inception":
             model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
