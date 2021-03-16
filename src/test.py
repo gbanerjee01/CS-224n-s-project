@@ -12,8 +12,10 @@ import models.multinet
 import models.inception
 import models.linear_feedforward
 import models.simple_conv_network
+import models.transformer
 import time
 import dataloaders.datasetravdess
+import dataloaders.datasettransformer
 import pickle
 import os
 
@@ -66,6 +68,11 @@ if __name__ == "__main__":
             model = models.resnet_stitched.StitchedResNet(params.run_name, params.model_path).to(device)
         elif params.model=="densenet_stitched":
             model = models.densenet_stitched.StitchedDenseNet(params.run_name, params.model_path).to(device)
+        elif params.model=="transformer":
+            test_loader = dataloaders.datasettransformer.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats)
+            test_loader_w = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats)
+            test_loader_m = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
+            model = models.transformer.Transformer(blocks=params.blocks)
 
 
         loss_fn = nn.CrossEntropyLoss()
