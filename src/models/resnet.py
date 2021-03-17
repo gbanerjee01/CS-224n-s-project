@@ -14,11 +14,12 @@ class ResNet(nn.Module):
         #comment out below lines if not running test run
 		checkpoint = torch.load(checkpoint_path, map_location=torch.device(device))
 		loaded_dict = checkpoint['model']
+		print(loaded_dict.keys())
 		prefix = 'model.'
 		n_clip = len(prefix)
 		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
 		self.model.load_state_dict(adapted_dict)
-		print(adapted_dict.keys())
+		# print(adapted_dict.keys())
 		sys.exit()
 		for param in self.model.parameters():
 			param.requires_grad = False
