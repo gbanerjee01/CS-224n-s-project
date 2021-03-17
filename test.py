@@ -8,14 +8,11 @@ import validate
 import argparse
 import models.densenet
 import models.resnet
-import models.multinet
 import models.inception
 import models.linear_feedforward
 import models.simple_conv_network
-import models.transformer
 import time
 import dataloaders.datasetravdess
-import dataloaders.datasettransformer
 import pickle
 import os
 
@@ -40,30 +37,19 @@ if __name__ == "__main__":
     else:
         feats = params.features
 
-    is_mnet = False
-    try:
-        if params.ismultinet=="True":
-            is_mnet = True
-        else:
-            is_mnet = False
-    except:
-        pass
-
     for i in range(1, params.num_folds+1):
         with open(params.data, 'rb') as fopen:
             train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
 
-        test_loader = dataloaders.datasetravdess.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
-        test_loader_w = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
-        test_loader_m = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
+        test_loader = dataloaders.datasetravdess.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats)
+
+        val_loader_w = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats)
+        val_loader_m = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
         
         if params.model=="densenet":
-            model = models.densenet.DenseNet(params.run_name, params.model_path, params.pretrained).to(device)
+            model = models.densenet.DenseNet(params.run_name, params.pretrained).to(device)
         elif params.model=="resnet":
-            model = models.resnet.ResNet(params.run_name, params.model_path, params.pretrained).to(device)
-        elif params.model=="multinet":
-            model = models.multinet.MultiNet(params.run_name, params.model_path, params.pretrained).to(device)
-            # utils.load_checkpoint(params.model_path, model)
+            model = models.resnet.ResNet(params.run_name, params.pretrained).to(device)
         elif params.model=="inception":
             model = models.inception.Inception(params.run_name, params.pretrained).to(device) 
         elif params.model=="linear_feedforward":
@@ -77,12 +63,6 @@ if __name__ == "__main__":
             model = models.resnet_stitched.StitchedResNet(params.run_name, params.model_path).to(device)
         elif params.model=="densenet_stitched":
             model = models.densenet_stitched.StitchedDenseNet(params.run_name, params.model_path).to(device)
-        elif params.model=="transformer":
-            test_loader = dataloaders.datasettransformer.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats)
-            test_loader_w = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats)
-            test_loader_m = dataloaders.datasettransformer.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
-            model = models.transformer.Transformer(blocks=params.blocks).to(device)
-
 
         loss_fn = nn.CrossEntropyLoss()
 
@@ -90,10 +70,10 @@ if __name__ == "__main__":
         print("Loss:", test_loss)
         print("Accuracy:", test_accuracy)
 
-        test_loss, test_accuracy = validate.evaluate(model, device, test_loader_w, loss_fn)
+        test_loss, test_accuracy = validate.evaluate(model, device, val_loader_w, loss_fn)
         print("Women Test Loss:", test_loss)
         print("Women Test Accuracy:", test_accuracy)
 
-        test_loss, test_accuracy = validate.evaluate(model, device, test_loader_m, loss_fn)
+        test_loss, test_accuracy = validate.evaluate(model, device, val_loader_m, loss_fn)
         print("Men Test Loss:", test_loss)
         print("Men Test Accuracy:", test_accuracy)

@@ -51,7 +51,7 @@ def load_checkpoint(checkpoint, model, optimizer=None, parallel=False):
 
 	if optimizer:
 		optimizer.load_state_dict(checkpoint["optimizer"])
-	return checkpoint
+	return model
 
 def initialize_weights(m):
 	classname = m.__class__.__name__
