@@ -5,7 +5,7 @@ architectures = ['Logistic Regression', 'Convolutional Network', 'Issa et al. Ne
 validation_accuracies = [51.38, 65.28, 73.61, 58.33, 80.56, 81.94, 81.94, 87.50, 84.72]
 test_accuracies = [22.22, 13.19, 75.69, 15.28, 76.39, 73.61, 74.31, 79.17, 77.78]
 
-'''validation_fig = plt.figure()
+validation_fig = plt.figure()
 ax = validation_fig.add_axes([0.1,0.2,0.8,0.72])
 ax.bar(architectures, validation_accuracies)
 validation_fig.suptitle('Neural Architecture Validation Accuracies', fontsize=11)
@@ -25,7 +25,7 @@ plt.xlabel('Neural Architecture', fontsize=9)
 plt.ylabel('Test Accuracy', fontsize=9)
 plt.xticks(rotation=55, fontsize=7)
 test_fig.savefig('test_bar_plot.png')
-plt.close(test_fig)'''
+plt.close(test_fig)
 
 
 
