@@ -63,22 +63,32 @@ class MultiNet(nn.Module):
 		checkpoint = torch.load(checkpoint_path, map_location=torch.device(device))
 		# print(checkpoint.keys())
 		loaded_dict = checkpoint['model']
-		print(loaded_dict.keys())
-		prefix = 'model.'
+		# print(loaded_dict.keys())
+		prefix = 'densenet3.'
 		n_clip = len(prefix)
 		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
 		# print(adapted_dict.keys())
-		sys.exit()
-		# self.model.load_state_dict(adapted_dict)
+		# sys.exit()
+		self.densenet3.load_state_dict(adapted_dict)
 
-		# for param in self.densenet3.parameters():
-		# 	param.requires_grad = False
+		for param in self.densenet3.parameters():
+			param.requires_grad = False
 
-		# for param in self.resnet3.parameters():
-		# 	param.requires_grad = False
 
-		# for param in self.fc4.parameters():
-		# 	param.requires_grad = False
+		prefix = 'resnet3.'
+		n_clip = len(prefix)
+		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
+		self.resnet3.load_state_dict(adapted_dict)
+		for param in self.resnet3.parameters():
+			param.requires_grad = False
+
+
+		prefix = 'fc4.'
+		n_clip = len(prefix)
+		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
+		self.fc4.load_state_dict(adapted_dict)
+		for param in self.fc4.parameters():
+			param.requires_grad = False
 		
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
