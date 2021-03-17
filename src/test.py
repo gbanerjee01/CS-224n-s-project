@@ -40,13 +40,22 @@ if __name__ == "__main__":
     else:
         feats = params.features
 
+    is_mnet = False
+    try:
+        if params.ismultinet=="True":
+            is_mnet = True
+        else:
+            is_mnet = False
+    except:
+        pass
+
     for i in range(1, params.num_folds+1):
         with open(params.data, 'rb') as fopen:
             train_dataset, val_dataset, test_dataset = pickle.load(fopen, encoding='latin1')
 
-        test_loader = dataloaders.datasetravdess.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats)
-        test_loader_w = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats)
-        test_loader_m = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats)
+        test_loader = dataloaders.datasetravdess.fetch_dataloader(test_dataset, params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
+        test_loader_w = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 0], params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
+        test_loader_m = dataloaders.datasetravdess.fetch_dataloader(test_dataset[test_dataset.gender == 1], params.batch_size, params.num_workers, features=feats, is_multinet=is_mnet)
         
         if params.model=="densenet":
             model = models.densenet.DenseNet(params.run_name, params.model_path, params.pretrained).to(device)
