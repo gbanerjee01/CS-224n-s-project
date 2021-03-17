@@ -61,11 +61,12 @@ class MultiNet(nn.Module):
 		device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         #comment out below lines if not running test run
 		checkpoint = torch.load(checkpoint_path, map_location=torch.device(device))
+		print(checkpoint.keys())
 		loaded_dict = checkpoint['model']
 		prefix = 'model.'
 		n_clip = len(prefix)
 		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
-		print(adapted_dict.keys())
+		# print(adapted_dict.keys())
 		sys.exit()
 		# self.model.load_state_dict(adapted_dict)
 
