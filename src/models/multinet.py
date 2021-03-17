@@ -95,8 +95,8 @@ class MultiNet(nn.Module):
 		
 		device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-		print(x.keys())
-		sys.exit()
+		# print(x.keys())
+		# sys.exit()
 		dinput = x['dnet']
 		rinput = x['rnet']
 
