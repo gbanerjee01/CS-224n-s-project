@@ -1,9 +1,10 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
+import sys
 
 class MultiNet(nn.Module):
-	def __init__(self, dataset, pretrained=True):
+	def __init__(self, dataset, checkpoint_path, pretrained=True):
 		super().__init__()
 		num_classes = 8
 
@@ -56,6 +57,26 @@ class MultiNet(nn.Module):
 			nn.Dropout(p=0.5),
 			nn.Linear(64, num_classes)
 		)
+
+		device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        #comment out below lines if not running test run
+		checkpoint = torch.load(checkpoint_path, map_location=torch.device(device))
+		loaded_dict = checkpoint['model']
+		prefix = 'model.'
+		n_clip = len(prefix)
+		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
+		print(adapted_dict.keys())
+		sys.exit()
+		# self.model.load_state_dict(adapted_dict)
+
+		# for param in self.densenet3.parameters():
+		# 	param.requires_grad = False
+
+		# for param in self.resnet3.parameters():
+		# 	param.requires_grad = False
+
+		# for param in self.fc4.parameters():
+		# 	param.requires_grad = False
 		
 	def forward(self, x):
 		#x is dict containing different preprocessed features; we always constrain to having all 5 feats available so no need to error check for that
@@ -69,12 +90,12 @@ class MultiNet(nn.Module):
 		rinput = rinput.to(device)
 
 		squeezed_dinput = torch.squeeze(torch.stack([dinput, dinput, dinput],dim=1))
-		doutput = self.densenet2(squeezed_dinput)
+		doutput = self.densenet3(squeezed_dinput)
 
-		# squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
-		# routput = self.resnet2(squeezed_rinput)
+		squeezed_rinput = torch.squeeze(torch.stack([rinput, rinput, rinput],dim=1))
+		routput = self.resnet3(squeezed_rinput)
 
-		doutput2 = self.densenet3(squeezed_dinput)
+		# doutput2 = self.densenet3(squeezed_dinput)
 
 		# print(doutput.shape)
 		# print(routput.shape)
