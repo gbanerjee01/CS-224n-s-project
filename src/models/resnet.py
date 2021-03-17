@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
+import sys
 
 class ResNet(nn.Module):
 	def __init__(self, dataset, checkpoint_path, pretrained=True):
@@ -17,7 +18,8 @@ class ResNet(nn.Module):
 		n_clip = len(prefix)
 		adapted_dict = {k[n_clip:]: v for k, v in loaded_dict.items() if k.startswith(prefix)}
 		self.model.load_state_dict(adapted_dict)
-
+		print(adapted_dict.keys())
+		sys.exit()
 		for param in self.model.parameters():
 			param.requires_grad = False
 		
